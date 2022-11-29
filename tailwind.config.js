@@ -5,10 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {colors: {
+    extend: {
+      colors: {
       'selene-green': '#277273',
       'selene-green-dark': '#022F38',
+      'selene-blue':'#9EC1D7'
     },
+    fontFamily:{
+      serif:["mistral"]
+    }
   },
   },
   plugins: [],

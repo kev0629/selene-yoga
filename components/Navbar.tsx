@@ -12,10 +12,11 @@ function Navbar({}: Props) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <a
-              className="text-3xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+              className="text-3xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"
               href="#pablo"
             >
-              Séléné yoga
+              <div className='font-serif'>Séléné yoga</div>
+              <div className='pl-20 text-xs'>by florian Ponte</div>
             </a>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"

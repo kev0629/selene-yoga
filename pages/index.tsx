@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 
-import Footer from './Footer'
-import Navbar from './Navbar'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+import Intro from '../components/Intro'
+
 export default function Home() {
   return (
     < >
@@ -15,7 +17,7 @@ export default function Home() {
 
       <main className='text-xs md:text-base'>
         <Navbar/>
-        <h1>Selene-Yoga</h1>
+        <Intro/>
         <Footer/>
       </main>
     </>
