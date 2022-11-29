@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Intro from '../components/Intro'
+import Section from '../components/Section'
+import News from '../components/News'
 
 export default function Home() {
   return (
@@ -18,6 +20,9 @@ export default function Home() {
       <main className='text-xs md:text-base'>
         <Navbar/>
         <Intro/>
+        <Section title='Actualités - évènements'>
+          <News/>
+        </Section>
         <Footer/>
       </main>
     </>

@@ -10,8 +10,8 @@ const Intro = (props: Props) => {
             à votre seule réelle liberté,
             celle d’embrasser votre destin.
         </div>
-        <div className='m-5'>
-          <button className='border-2 rounded-lg border-selene-blue p-1 m'>
+        <div className='m-5 flex justify-center'>
+          <button className='border-2 rounded-lg border-selene-blue p-1 '>
             Ce qui oeuvre ici
           </button>
         </div>
