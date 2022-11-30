@@ -11,7 +11,7 @@ const Intro = (props: Props) => {
             celle d’embrasser votre destin.
         </div>
         <div className='m-5 flex justify-center'>
-          <button className='border-2 rounded-lg border-selene-blue p-1 '>
+          <button className='border-2 rounded-lg border-selene-blue p-1 text-selene-green'>
             Ce qui oeuvre ici
           </button>
         </div>

@@ -12,7 +12,8 @@ module.exports = {
       'selene-blue':'#9EC1D7'
     },
     fontFamily:{
-      serif:["mistral"]
+      serif:["mistral"],
+      main:["kaisei"]
     }
   },
   },

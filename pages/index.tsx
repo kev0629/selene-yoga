@@ -6,7 +6,11 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Intro from '../components/Intro'
 import Section from '../components/Section'
+import Actu from '../components/Actu'
 import News from '../components/News'
+import Contact from '../components/Contact'
+import Soins from '../components/Soins'
+import Practices from '../components/Practices'
 
 export default function Home() {
   return (
@@ -17,11 +21,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='text-xs md:text-base'>
+      <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <Intro/>
         <Section title='Actualités - évènements'>
+          <Actu/>
+        </Section>
+        <Section title='Articles'>
           <News/>
+        </Section>
+        <Section title='Les soins'>
+          <Soins/>
+        </Section>
+        <Section title='Les pratiques'>
+          <Practices/>
+        </Section>
+        <Section title='Contact'>
+          <Contact/>
         </Section>
         <Footer/>
       </main>

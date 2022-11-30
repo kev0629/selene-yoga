@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 type Props = {}
 
-function Navbar({}: Props) {
+const Navbar = ({}: Props) => {
  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   return (
     <>

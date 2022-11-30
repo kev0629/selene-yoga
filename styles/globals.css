@@ -5,16 +5,21 @@
 @layer base {
   @font-face {
     font-family: mistral;
-    src: url("../mistral/MISTRAL.TTF");
+    src: url("../Fonts/mistral/MISTRAL.TTF");
   }
-}
+    @font-face {
+      font-family: kaisei;
+      src: url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+    }
+  }
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
