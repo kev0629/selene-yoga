@@ -11,6 +11,7 @@ import News from '../components/News'
 import Contact from '../components/Contact'
 import Soins from '../components/Soins'
 import Practices from '../components/Practices'
+import Modal from '../components/Modal'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
 
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
+        <Modal/>
         <Intro/>
         <Section title='Actualités - évènements'>
           <Actu/>
