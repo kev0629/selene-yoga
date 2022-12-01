@@ -26,19 +26,19 @@ export default function Home() {
         <Navbar/>
         <Modal/>
         <Intro/>
-        <Section title='Actualités - évènements'>
+        <Section title='Actualités - évènements' color='selene-green'>
           <Actu/>
         </Section>
-        <Section title='Articles'>
-          <News/>
+        <Section title='Articles' color='selene-green'>
+          <News/>xx
         </Section>
-        <Section title='Les soins'>
+        <Section title='Les soins'  color='selene-green'>
           <Soins/>
         </Section>
-        <Section title='Les pratiques'>
+        <Section title='Les pratiques' bg="gradient-to-b from-selene-green-dark to-selene-green" color='white'>
           <Practices/>
         </Section>
-        <Section title='Contact'>
+        <Section title='Contact' color='selene-green'>
           <Contact/>
         </Section>
         <Footer/>
