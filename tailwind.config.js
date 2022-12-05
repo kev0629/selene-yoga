@@ -9,7 +9,8 @@ module.exports = {
       colors: {
       'selene-green': '#277273',
       'selene-green-dark': '#022F38',
-      'selene-blue':'#9EC1D7'
+      'selene-blue':'#9EC1D7',
+      'selene-white':'#FBF5EE'
     },
     fontFamily:{
       serif:["mistral"],
