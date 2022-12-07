@@ -17,8 +17,6 @@ const Section = (props: Props) => {
     <section className='relative' id={props.name}>
       {props.bgImg && 
       <div className='absolute z-[-1] w-screen h-full' style={{
-        
-        // height: "100vh"
       }}>
         <Image src={props.bgImg} alt="Mountains with snow" layout="fill" objectFit='cover' placeholder='blur'/>
       </div>}
