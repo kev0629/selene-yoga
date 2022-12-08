@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import bg from '../Images/z-s-nqVDLh2WLus-unsplash.jpg'
 // import styles from '../styles/Home.module.css'
+import flo_shadow from '../Images/flo_shadow.jpg'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -40,7 +41,7 @@ export default function Home() {
         <Section title='Les pratiques' name='practices' bg="gradient-to-b from-selene-green-dark to-selene-green" color='white'>
           <Practices/>
         </Section>
-        <Section title='Contact' color='selene-green' name='contact'>
+        <Section title='Contact' color='selene-green' name='contact' bgImg={flo_shadow}>
           <Contact/>
         </Section>
         <Footer/>
