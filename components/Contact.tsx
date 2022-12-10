@@ -6,10 +6,18 @@ const Contact = (props: Props) => {
     const [handleStory, setHandleStory] = useState<boolean>(false)
   return (
     <>
-    <div className="flex justify-center">
-        <button className="rounded-md p-1 mb-5 border-[1px] border-black" onClick={() => setHandleStory(!handleStory)}>
-            Mon histoire
-        </button>
+    <div className="flex justify-center flex-col h-96">
+        <div className="bg-gradient-to-b text-black via-[#C0CCCE] from-[#C0CCCE] border pb-10 rounded-xl block text-center">
+            <div className="text-xl">Florian Ponte</div>
+            <div className="text-lg">florian.ponte@gmail.com</div>
+            <div className="text-lg">06.23.27.12.40</div>
+        </div>
+        <div>
+            <button className="rounded-md p-1 mb-5 border-[1px] border-black" onClick={() => setHandleStory(!handleStory)}>
+                Mon histoire
+            </button>
+        </div>
+        
     </div>
         {
             handleStory &&

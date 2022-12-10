@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import bg from '../Images/z-s-nqVDLh2WLus-unsplash.jpg'
+import sunshide_mountain from '../Images/z-s-nqVDLh2WLus-unsplash.jpg'
+import moutain_lake from '../Images/mountain_lake.png'
 // import styles from '../styles/Home.module.css'
 import flo_shadow from '../Images/flo_shadow.jpg'
 
@@ -35,13 +36,13 @@ export default function Home() {
         <Section title='Articles' color='selene-green' name='news' bg="gradient-to-b from-white to-selene-white">
           <News/>
         </Section>
-        <Section title='Les soins'  color='selene-green' name='soins' bgImg={bg}>
+        <Section title='Les soins'  color='selene-green' name='soins' bgImg={sunshide_mountain}>
           <Soins/>
         </Section>
-        <Section title='Les pratiques' name='practices' bg="gradient-to-b from-selene-green-dark to-selene-green" color='white'>
+        <Section title='Les pratiques'  color='white' name='practices' bg="gradient-to-b from-selene-green-dark to-selene-green">
           <Practices/>
         </Section>
-        <Section title='Contact' color='selene-green' name='contact' bgImg={flo_shadow}>
+        <Section title='Contact' color='white' name='contact' bgImg={flo_shadow}>
           <Contact/>
         </Section>
         <Footer/>
