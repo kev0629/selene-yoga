@@ -1,13 +1,26 @@
+import Image from 'next/image'
+import img from '../Images/martin-jernberg-UdURxHDhrgY-unsplash.jpg'
+
+
 type Props = {
   text1: string,
-  text2: string
+  text2: string,
+  // img: any
 }
 
 const ActuComponent = (props: Props) => {
   return (
   <>
     <div className="flex flex-row space-x-2 text-base my-4">
-      <div className="basis-1/4 border-2 rounded-xl w-20 h-20">IMAGE</div>
+      <div className="basis-1/4 border-2 relative rounded-xl w-20 h-20">
+      <Image
+           src={img}
+           alt="Mountains with snow"
+           layout="fill"
+           objectFit="cover"
+           placeholder='blur'
+       />
+      </div>
       <div className="basis-3/4 ">
         <div className=''>{props.text1}</div>
         <div className='uppercase text-selene-green'>{props.text2}</div>

@@ -13,7 +13,7 @@ const Card = () => {
       </div>
       <div className=" flex flex-col px-5 pt-5">
           <h5 className="mb-2 text-2xl text-center text-black">Titre</h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+          <p className="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
           <div className=' flex justify-center'>
             <div className="inline-flex items-center px-3 py-2 mt-5 text-sm font-medium rounded-md text-white bg-selene-green-dark ">
             Lire la suite

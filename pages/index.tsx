@@ -29,7 +29,9 @@ export default function Home() {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <Modal/>
-        <Intro/>
+        <Section name='intro' bgImg={moutain_lake}>
+          <Intro/>
+        </Section>
         <Section title='Actualités - évènements' name='events' color='selene-green'>
           <Actu/>
         </Section>

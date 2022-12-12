@@ -36,7 +36,7 @@ const CaresCard = (props:CardProps) => {
 const Soins = (props: Props) => {
   return (
     <>
-    <div className="flex flex-col content-center m-auto uppercase text-center w-5/6 space-y-5">
+    <div className="flex flex-col content-center m-auto uppercase text-center w-5/6 space-y-5 h-96">
         <CaresCard title={'Consultations individuelles'} img={img1}/>
         <CaresCard title={'Rencontres Colectives'} img={img2}/>
     </div>
