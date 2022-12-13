@@ -21,9 +21,8 @@ const CaresCard = (props:CardProps) => {
       </div>
         <Image
            src={props.img}
-           alt="Mountains with snow"
+           alt="Mountains sunset"
            layout="fill"
-           objectFit="cover"
            placeholder='blur'
        />
        

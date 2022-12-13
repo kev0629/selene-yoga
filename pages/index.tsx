@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import sunshide_mountain from '../Images/z-s-nqVDLh2WLus-unsplash.jpg'
+import sunshide_mountain from '../Images/z-s-nqVDLh2WLus-unsplash_1.jpg'
 import moutain_lake from '../Images/mountain_lake.png'
-// import styles from '../styles/Home.module.css'
 import flo_shadow from '../Images/flo_shadow.jpg'
 
 import Footer from '../components/Footer'
