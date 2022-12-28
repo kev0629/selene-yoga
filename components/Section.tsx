@@ -25,9 +25,7 @@ const Section = (props: Props) => {
         <div className="flex justify-center">
         {props.title &&  <div className={`border-t-2 border-${props.color} w-20 h-1`}></div>}
         </div>
-        <div className='p-5'>
-          {props.children}
-        </div>   
+          {props.children} 
     </div>
     </section>
     
