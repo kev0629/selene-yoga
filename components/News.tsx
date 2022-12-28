@@ -30,14 +30,13 @@ const Card = () => {
 const News = (props: Props) => {
   return (
     <section>
-      <div className='flex flex-row justify-center'>\
+      <div className='flex flex-row justify-center'>
         <Card/>
       </div>
       <div className="flex justify-center">
       <StarButton className='px-6 py-3 mt-4'>
         {"Voir plus d'articles"}
       </StarButton>
-       {/* <button className='mt-4 px-6 py-3 rounded-md bg-selene-green-dark text-white'>{"Voir plus d'articles"}</button> */}
       </div>
     </section>
 
