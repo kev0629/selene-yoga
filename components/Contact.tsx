@@ -39,7 +39,7 @@ const Contact = (props: Props) => {
         
         <div className="flex justify-center mt-44">
             
-            <div className="bg-gradient-to-b relative text-black w-64 via-[#C0CCCE] from-[#C0CCCE] border pb-10 rounded-xl block text-center">
+            <div className="bg-gradient-to-b relative text-black w-64 via-[#C0CCCE]/75 from-[#C0CCCE]/75 border pb-10 rounded-xl block text-center">
                 <div className="absolute bottom-24 z-10 left-[-120px]">
                         <Circle/>
                 </div>
