@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import StarButton from './StarButton'
 
 import img1 from '../Images/moutain_stars_lake.png'
 import img2 from '../Images/mountain_sunset.jpg'
@@ -16,8 +17,15 @@ const CaresCard = (props:CardProps) => {
   return (
     <>
     <div className="relative z-[-1] h-32 rounded-xl overflow-hidden">
-      <div className='flex justify-center'>
-        <p className=' relative z-[1] text-white bold text-base pt-12'>{props.title}</p>
+      <div className='flex flex-col justify-center center-content mt-6'>
+        <div>
+          <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
+        </div>
+        <div>
+          <StarButton className='px-3 py-1 mt-4 z-[1] border broder-white'>
+            {"En savoir plus"}
+          </StarButton>
+        </div>
       </div>
         <Image
            src={props.img}
