@@ -1,5 +1,6 @@
 import Image from "next/image"
 import bg from "../Images/button_star_bg.png"
+import {motion} from "framer-motion"
 
 type Props = {
     children:string,
@@ -9,7 +10,7 @@ type Props = {
 const StarButton = (props: Props) => {
   return (
     <>
-        <button className={`relative overflow-hidden rounded-lg text-white ${props.className}`}>
+        <motion.button whileHover={{scale:1.1}} className={`relative overflow-hidden rounded-lg text-white ${props.className}`}>
       <div className='flex justify-center'>
         <div className=' relative z-[1] text-white bold text-sm'>En savoir plus</div>
       </div>
@@ -19,7 +20,7 @@ const StarButton = (props: Props) => {
            layout="fill"
            placeholder='blur'
        />
-        </button>
+        </motion.button>
     </>
   )
 }

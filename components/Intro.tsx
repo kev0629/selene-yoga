@@ -1,4 +1,4 @@
-import React from 'react'
+import {motion} from 'framer-motion'
 
 type Props = {}
 
@@ -11,9 +11,9 @@ const Intro = (props: Props) => {
             celle d’embrasser votre destin.
         </div>
         <div className='m-5 flex justify-center'>
-          <button className=' bg-white border rounded-lg border-selene-blue p-1 text-selene-green text-base px-11'>
+          <motion.button whileHover={{scale:1.1}} className=' bg-white border rounded-lg border-selene-blue p-1 text-selene-green text-base px-11'>
             Ce qui oeuvre ici
-          </button>
+          </motion.button>
         </div>
         
     </div>

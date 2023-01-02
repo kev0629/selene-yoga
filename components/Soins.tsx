@@ -1,4 +1,4 @@
-import React from 'react'
+import {motion} from 'framer-motion'
 import Image from 'next/image'
 import StarButton from './StarButton'
 
@@ -16,7 +16,7 @@ type CardProps ={
 const CaresCard = (props:CardProps) => {
   return (
     <>
-    <div className="relative z-[-1] h-32 rounded-xl overflow-hidden">
+    <motion.div whileHover={{scale:1.1}} className="relative z-[-1] h-32 rounded-xl overflow-hidden">
       <div className='flex flex-col justify-center center-content mt-6'>
         <div>
           <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
@@ -30,11 +30,11 @@ const CaresCard = (props:CardProps) => {
         <Image
            src={props.img}
            alt="Mountains sunset"
-           layout="fill"
+           fill
            placeholder='blur'
        />
        
-    </div>
+    </motion.div>
     </>
     
   )

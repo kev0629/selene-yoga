@@ -12,14 +12,15 @@ const ActuComponent = (props: Props) => {
   return (
   <>
     <div className="flex flex-row space-x-2 text-base my-4">
-      <div className="basis-1/4 border-2 relative rounded-xl w-20 h-20">
-      <Image
-           src={img}
-           alt="Mountains with snow"
-           layout="fill"
-           objectFit="cover"
-           placeholder='blur'
-       />
+      <div className="basis-1/4 relative z-[-1]  w-20 h-20 rounded-xl overflow-hidden">
+        <div className='flex flex-col justify-center center-content mt-6'>
+        </div>
+          <Image
+            src={img}
+            alt="Mountains sunset"
+            fill
+            placeholder='blur'
+        />
       </div>
       <div className="basis-3/4 ">
         <div className=''>{props.text1}</div>
