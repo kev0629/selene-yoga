@@ -15,8 +15,7 @@ type CardProps ={
 
 const CaresCard = (props:CardProps) => {
   return (
-    <>
-    <motion.div whileHover={{scale:1.1}} className="relative z-[-1] h-32 rounded-xl overflow-hidden">
+    <motion.div whileHover={{scale:1.1}} className="relative h-32 rounded-xl overflow-hidden">
       <div className='flex flex-col justify-center center-content mt-6'>
         <div>
           <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
@@ -35,7 +34,6 @@ const CaresCard = (props:CardProps) => {
        />
        
     </motion.div>
-    </>
     
   )
 }
