@@ -1,11 +1,19 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import Link from 'next/link'
+import {motion} from "framer-motion"
  
 
 type Props = {}
 
 const Navbar = ({}: Props) => {
  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+ const burgerButton = useRef(null)
+
+ const handleNavbar = () =>{
+
+  setNavbarOpen(!navbarOpen)
+ }
+
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-3 bg-gradient-to-b from-selene-green to-selene-green-dark">
@@ -21,7 +29,8 @@ const Navbar = ({}: Props) => {
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
+              ref={burgerButton}
+              onClick={handleNavbar}
             >
               {!navbarOpen ? (
                 <svg

@@ -9,8 +9,8 @@ module.exports = {
       colors: {
       'selene-green': '#277273',
       'selene-green-dark': '#022F38',
-      'practice-green-light':'#3A7A7C',
-      'practice-green-dark':'#2E505D',
+      'practice-green-light':'#4A7882',
+      'practice-green-dark':'#2F505E',
       'selene-blue':'#9EC1D7',
       'selene-white':'#FBF5EE'
     },

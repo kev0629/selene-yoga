@@ -15,19 +15,19 @@ const Contact = (props: Props) => {
     <>
     <div className="flex justify-center flex-col h-max">
         
-        <div className="flex justify-center mt-44">
+        <div className="flex justify-center mt-10">
             
             <div className="bg-gradient-to-b relative text-black w-64 via-[#C0CCCE]/75 from-[#C0CCCE]/75 border pb-10 rounded-xl block text-center">
-                <div className="absolute bottom-24 z-10 left-[-120px]">
+                {/* <div className="absolute bottom-24 z-10 left-[-120px]">
                         <Circle/>
-                </div>
+                </div> */}
                 <div className="text-xl">Florian Ponte</div>
                 <div className="text-lg">florian.ponte@gmail.com</div>
                 <div className="text-lg">06.23.27.12.40</div>
             </div>
         </div>
         <div className="flex justify-center m-10">
-            <motion.button whileHover={{scale:1.1}} className="rounded-md p-1 text-white text-base border-[1px] bg-gradient-to-b mt-10 from-[#C0CCCE] border-white" onClick={() => props.setHandleStory(!props.handleStory)}>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="rounded-md p-1 text-white text-base border-[1px] bg-gradient-to-b mt-10 from-[#C0CCCE] border-white" onClick={() => props.setHandleStory(!props.handleStory)}>
                 <div className="inline">
                     <p className="inline mx-1">Mon histoire </p>
                         <svg className="inline" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">

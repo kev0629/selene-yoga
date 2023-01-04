@@ -1,8 +1,8 @@
 import {motion} from 'framer-motion'
-import {useRef, useEffect, useState, ReactElement} from 'react'
+import {useRef, useEffect, useState, ReactNode} from 'react'
 
 type  Props = {
-  children: ReactElement[]| ReactElement | string | number;
+  children: ReactNode;
 
 }
 
@@ -43,12 +43,7 @@ const Carousel= (props:Props) => {
       </button>
       < motion.div ref={carousel} className='carousel cursor-grab overflow-hidden '>
         <motion.div drag="x" dragConstraints={{right:0,left:-width}} className='inner-carousel flex flex-row ' animate={{x:scroll}}>
-            {/* {lst.map((number) => {
-              return (
-                <Card num={number} key={number}/>
-              )
-            })}  */
-            props.children}
+            {props.children}
         </motion.div>
       </motion.div>
       <button className=' ml-2 pointer-events-auto' onClick={()=>toggleNext()} >

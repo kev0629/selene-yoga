@@ -1,13 +1,13 @@
-import React from 'react'
-import Image from 'next/image'
+import {ReactNode} from 'react'
+import Image,{StaticImageData} from 'next/image'
 
 type Props = {
-  children: any,
+  children: ReactNode,
   name:string,
   title?:string,
   bg?: string,
   color?: string
-  bgImg?:any,
+  bgImg?:StaticImageData,
 
 }
 
@@ -16,9 +16,10 @@ const Section = (props: Props) => {
 
     <section className='relative' id={props.name}>
       {props.bgImg && 
-      <div className='absolute z-[-1] w-screen h-full' style={{
+      <div className='absolute z-[-1] w-screen h-full overflow-hidden' style={{
       }}>
-        <Image src={props.bgImg} alt="Mountains with snow" layout="fill" objectFit='cover' placeholder='blur'/>
+        <Image src={props.bgImg} alt="Mountains with snow" fill 
+           style={{objectFit:'cover'}} placeholder='blur'/>
       </div>}
       <div className={`border-b border-white mb-[0.1px] bg-${props.bg}`}>
         {props.title && <div className={`text-3xl pt-5 text-center mx-10 font-serif text-selene-green text-${props.color}`}>{props.title}</div>}

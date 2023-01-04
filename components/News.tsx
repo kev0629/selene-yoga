@@ -16,9 +16,7 @@ const Card = () => {
           <h5 className="mb-2 text-2xl text-center text-black">Titre</h5>
           <p className="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
           <div className=' flex justify-center'>
-            <StarButton className='px-3 py-2 mt-5'>
-            Lire la suite
-            </StarButton>
+            <StarButton title='Lire la suite' className='px-3 py-2 mt-5'/>
           </div>
           
       </div>
@@ -34,9 +32,7 @@ const News = (props: Props) => {
         <Card/>
       </div>
       <div className="flex justify-center">
-      <StarButton className='px-6 py-3 mt-4'>
-        {"Voir plus d'articles"}
-      </StarButton>
+      <StarButton title="Voir plus d'articles" className='px-6 py-3 mt-4'/>
       </div>
     </section>
 

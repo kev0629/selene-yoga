@@ -15,15 +15,13 @@ type CardProps ={
 
 const CaresCard = (props:CardProps) => {
   return (
-    <motion.div whileHover={{scale:1.1}} className="relative h-32 rounded-xl overflow-hidden">
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="relative h-32 rounded-xl overflow-hidden">
       <div className='flex flex-col justify-center center-content mt-6'>
         <div>
           <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
         </div>
         <div>
-          <StarButton className='px-3 py-1 mt-4 z-[1] border broder-white'>
-            {"En savoir plus"}
-          </StarButton>
+          <StarButton title='En savoir plus' className='px-3 py-1 mt-4 z-[1] border broder-white'/>
         </div>
       </div>
         <Image
