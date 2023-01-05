@@ -1,6 +1,6 @@
-import { useState } from "react";
 import Image,{StaticImageData} from "next/image";
 import {motion} from "framer-motion"
+import { useRotate } from "../hooks/useRotate";
 
 type CardProps = {
     title:string,
@@ -8,16 +8,12 @@ type CardProps = {
     rotate?:number
   }
 
+
+
 const PracticeCard = (props: CardProps) => {
-  const [rotate, setRotate] = useState<number>(0);
-  const [front, setFront] = useState<boolean>(true);
+  const [rotate,front,setRotation] = useRotate(180,true)
 
-  const rotateCard = (rotate: number, front: boolean) => {
-    setRotate(rotate + 180);
-    setFront(!front);
-  };
-
-  return <motion.div onClick={() => rotateCard(rotate, front)} animate={{
+  return <motion.div onClick={() => setRotation()} animate={{
     rotateX: rotate,
     transition: {
       duration: 0.5
