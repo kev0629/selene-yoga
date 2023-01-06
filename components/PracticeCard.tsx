@@ -1,6 +1,6 @@
 import Image,{StaticImageData} from "next/image";
 import {motion} from "framer-motion"
-import { useRotate } from "../hooks/useRotate";
+import { useRotate } from "./../hooks/useRotate";
 
 type CardProps = {
     title:string,

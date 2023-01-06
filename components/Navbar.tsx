@@ -65,10 +65,13 @@ const Navbar = ({}: Props) => {
               )}
             </button>
           </div>
-          <div
-            className={`md:flex flex-grow items-center${
-              navbarOpen ? ' flex' : ' hidden'
-            }`}
+          <motion.div
+            // className={`md:flex flex-grow items-center${
+            //   navbarOpen ? ' flex' : ' hidden'
+            // }`}
+            className="md:flex flex-grow items-center overflow-hidden"
+            initial = {{height:0, opacity:0}}
+            animate={navbarOpen ? { display: 'flex',opacity:1,height:'auto',transition:{duration:0.3}} : {opacity:0,transition:{duration:0.3}}}
             id="example-navbar-danger"
           >
             <ul className="flex flex-col md:flex-row list-none md:ml-auto">
@@ -102,7 +105,7 @@ const Navbar = ({}: Props) => {
                   </Link>
                 </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </nav>
     </>

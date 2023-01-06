@@ -1,37 +1,28 @@
+import {useCarousel} from '../hooks/useCarousel';
+import React from 'react';
 import {motion} from 'framer-motion'
-import {useRef, useEffect, useState, ReactNode} from 'react'
 
 type  Props = {
-  children: ReactNode;
+  children: React.ReactNode;
 
 }
 
 
-const Carousel= (props:Props) => {
 
-  const [ width, setwidth] = useState<number>(0)
-  const carousel = useRef<any>()
-  const next = useRef<any>()
-  const [itemsCount, setItemsCount] = useState<number>(0)
-  const [scroll, setScroll] = useState<number>(0)
+const Carousel = (props:Props) => {
+  const [carousel, width, scroll, setScroll] = useCarousel()
   
-  useEffect(() => {
-    setwidth(carousel.current.scrollWidth-carousel.current.offsetWidth + 20)
-  }, [])
 
   const toggleNext:Function = () => {
     if (carousel.current.scrollWidth != carousel.current.offsetWidth){
-
-      setScroll(x => x-100)
-      setItemsCount(itemsCount-1) 
+      setScroll(x => x-100) 
     }
   }
 
 
   const togglePrevious:Function = () => {
-    if (carousel.current.scrollWidth < 1986){
+    if (carousel.current.scrollWidth < 824){
       setScroll(x => x+100)
-      setItemsCount(itemsCount-1) 
     }
   }
   return (
