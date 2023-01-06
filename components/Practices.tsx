@@ -37,7 +37,7 @@ const cardsContent = [
 
 const Practices = (props: Props) => {
   return (
-    <div className='flex justify-center'>
+    <div >
      <Carousel>
       <PracticeCard title="L’approche symbolique" img={img1}/>
       <PracticeCard title="L’approche yogique" img={img2}/>
