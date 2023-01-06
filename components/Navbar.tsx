@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect, MutableRefObject} from 'react'
 import Link from 'next/link'
 import {motion} from "framer-motion"
  
@@ -7,7 +7,7 @@ type Props = {}
 
 const Navbar = ({}: Props) => {
  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
- const burgerButton = useRef(null)
+ const burgerButton = useRef(null);
 
  const handleNavbar = () =>{
 
@@ -16,7 +16,7 @@ const Navbar = ({}: Props) => {
 
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-3 bg-gradient-to-b from-selene-green to-selene-green-dark">
+      <nav className="fixed z-[10] flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-3 bg-gradient-to-b from-selene-green to-selene-green-dark">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <a
@@ -76,38 +76,60 @@ const Navbar = ({}: Props) => {
           >
             <ul className="flex flex-col md:flex-row list-none md:ml-auto">
                 <li className="nav-item">
-                  <Link  href="/"
+                  <Link  href="/#home"
                     className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
                   >
-                    <span className="ml-2">Facture</span>
+                    <span className="ml-2">Home</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link  href="/Prestation"
+                  <Link  href="/#yogastro"
                     className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
 
                   >
-                    <span className="ml-2">Prestation</span>
+                    <span className="ml-2">Yogastrologie</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link  href="/Client"
+                  <Link  href="/#actu"
                     className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
                   >
-                    <span className="ml-2">Client</span>
+                    <span className="ml-2">Acualité - Évènements</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link  href="/Config"
+                  <Link  href="/#news"
                     className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
                   >
-                    <span className="ml-2">config</span>
+                    <span className="ml-2">Articles</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  href="/#health"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                  >
+                    <span className="ml-2">Les soins</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  href="/#practices"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                  >
+                    <span className="ml-2">Les pratiques</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  href="/#contact"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                  >
+                    <span className="ml-2">Contacts</span>
                   </Link>
                 </li>
             </ul>
           </motion.div>
         </div>
       </nav>
+      <div className='h-[105px]'></div>
     </>
   )
 }

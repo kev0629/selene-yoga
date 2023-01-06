@@ -34,17 +34,17 @@ export default function Home() {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <Modal/>
-        <Section name='intro' bgImg={moutain_lake}>
+        <Section name='home' bgImg={moutain_lake}>
           <div className='p-5'>
             <Intro/>
           </div>
         </Section>
-        <Section name='yogastrologie' bgImg={green_stars}>
+        <Section name='yogastro' bgImg={green_stars}>
           <div className='p-5'>
             <Yogastro/>
           </div>
         </Section>
-        <Section title='Actualités - évènements' name='events' color='selene-green'>
+        <Section title='Actualités - évènements' name='actu' color='selene-green'>
           <div className='p-5'>
             <Actu/>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
             <News/>
           </div>
         </Section>
-        <Section title='Les soins'  color='selene-green' name='soins' bgImg={sunshide_mountain}>
+        <Section title='Les soins'  color='selene-green' name='health' bgImg={sunshide_mountain}>
           <div className='p-5'>
             <Soins/>
           </div>
