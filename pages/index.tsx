@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 import sunshide_mountain from '../Images/hill.jpg'
 import moutain_lake from '../Images/mountain_lake.png'
-import flo_shadow from '../Images/flo_shadow.jpg'
+import flo_shadow from '../Images/flo_shadow_2.png'
 import green_stars from '../Images/green_stars.png'
 
 import Footer from '../components/Footer'
