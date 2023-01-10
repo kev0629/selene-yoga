@@ -19,7 +19,7 @@ const Section = (props: Props) => {
       <div className='absolute z-[-1] w-screen h-full overflow-hidden' style={{
       }}>
         <Image src={props.bgImg} alt="Mountains with snow" fill 
-           style={{objectFit:'cover'}} placeholder='blur'/>
+           style={{objectFit:'cover'}} blurDataURL=''/>
       </div>}
       <div className={`border-b border-white mb-[0.1px] bg-${props.bg}`}>
         {props.title && <div className={`text-3xl pt-5 text-center mx-10 font-serif text-selene-green text-${props.color}`}>{props.title}</div>}

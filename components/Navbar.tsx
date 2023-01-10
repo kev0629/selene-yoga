@@ -15,6 +15,10 @@ const Navbar = ({}: Props) => {
    if (windowsWidth>768){
     setNavbarOpen(true)
    }
+   else if (windowsWidth<768)
+   {
+    setNavbarOpen(false)
+   }
    
  
  }, [windowsWidth])
@@ -27,7 +31,7 @@ const Navbar = ({}: Props) => {
 
   return (
     <>
-      <nav className="fixed z-[10] w-[100%] flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-3 bg-gradient-to-b from-selene-green to-selene-green-dark">
+      <nav className="fixed z-[10] w-[100%] flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-1 bg-gradient-to-b from-selene-green to-selene-green-dark">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <a
@@ -38,7 +42,7 @@ const Navbar = ({}: Props) => {
               <div className='pl-20 text-xs'>by florian Ponte</div>
             </a>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+              className="text-white cursor-pointer text-xl leading-none px-1 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
               ref={burgerButton}
               onClick={handleNavbar}
@@ -50,7 +54,7 @@ const Navbar = ({}: Props) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-10 h-10"
                 >
                   <path
                     strokeLinecap="round"
@@ -65,7 +69,7 @@ const Navbar = ({}: Props) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-10 h-10"
                 >
                   <path
                     strokeLinecap="round"
@@ -149,7 +153,7 @@ const Navbar = ({}: Props) => {
           </motion.div>
         </div>
       </nav>
-      <div className='h-[105px]'></div>
+      <div className='h-[88.75px]'></div>
     </>
   )
 }
