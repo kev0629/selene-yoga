@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {useState} from 'react'
 
-import sunshide_mountain from '../Images/hill.jpg'
+import sunshide_mountain from '../Images/hill.svg'
 import moutain_lake from '../Images/mountain_lake.png'
 import flo_shadow from '../Images/flo_shadow_2.svg'
 import green_stars from '../Images/green_stars.png'
