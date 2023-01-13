@@ -1,11 +1,14 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  bgClassName:string
+}
 
 const Footer = (props: Props) => {
+  console.log(props.bgClassName)
   return (
     <>
-      <footer className='bg-black text-white text-[10px]'>
+      <footer className={`${props.bgClassName} text-white text-[10px]`}>
         <div className='flex flex-row p-5 gap-5'>
           <div className='basis-1/2 text-center'>
             <div className='font-serif'>MENTIONS LEGALES</div>

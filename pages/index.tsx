@@ -74,7 +74,7 @@ export default function Home() {
             <Story/>
           </div>
         </Section>)}
-        <Footer/>
+        <Footer bgClassName='bg-black'/>
       </main>
     </>
   )
