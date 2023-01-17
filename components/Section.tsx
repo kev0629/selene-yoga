@@ -6,7 +6,8 @@ type Props = {
   name:string,
   title?:string,
   bg?: string,
-  color?: string
+  borderColor?: string,
+  textColor?: string,
   bgImg?:StaticImageData,
 
 }
@@ -22,9 +23,9 @@ const Section = (props: Props) => {
            style={{objectFit:'cover'}} blurDataURL=''/>
       </div>}
       <div className={`border-b border-white mb-[0.1px] bg-${props.bg}`}>
-        {props.title && <div className={`text-3xl pt-5 text-center mx-10 font-serif text-selene-green text-${props.color}`}>{props.title}</div>}
+        {props.title && <div className={`text-3xl pt-5 text-center mx-10 font-serif  ${props.textColor}`}>{props.title}</div>}
         <div className="flex justify-center">
-        {props.title &&  <div className={`border-t-2 border-${props.color} w-20 h-1`}></div>}
+        {props.title &&  <div className={`border-t-2 ${props.borderColor} w-20 h-1`}></div>}
         </div>
           {props.children} 
     </div>

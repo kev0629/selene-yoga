@@ -5,7 +5,6 @@ type Props = {
 }
 
 const Footer = (props: Props) => {
-  console.log(props.bgClassName)
   return (
     <>
       <footer className={`${props.bgClassName} text-white text-[10px]`}>

@@ -44,32 +44,52 @@ export default function Home() {
             <Yogastro/>
           </div>
         </Section>
-        <Section title='Actualités - évènements' name='actu' color='selene-green'>
+        <Section 
+          title='Actualités - évènements' 
+          name='actu' 
+          borderColor='border-selene-green' 
+          textColor='text-selene-green'>
           <div className='p-5'>
             <Actu/>
           </div>
         </Section>
-        <Section title='Articles' color='selene-green' name='news' bg="gradient-to-b from-white to-selene-white">
+        <Section title='Articles' 
+          borderColor='border-selene-green' 
+          textColor='text-selene-green'
+          name='news' 
+          bg="gradient-to-b from-white to-selene-white">
           <div className='p-5'>
             <News/>
           </div>
         </Section>
-        <Section title='Les soins'  color='selene-green' name='health' bgImg={sunshide_mountain}>
+        <Section 
+          title='Les soins'
+          borderColor='border-selene-green' 
+          textColor='text-selene-green' 
+          name='health' 
+          bgImg={sunshide_mountain}>
           <div className='p-5'>
             <Soins/>
           </div>
         </Section>
-        <Section title='Les pratiques'  color='white' name='practices' bg="gradient-to-b from-practice-green-dark to-practice-green-light">
+        <Section 
+          title='Les pratiques'  
+          textColor='text-white' 
+          name='practices' 
+          bg="gradient-to-b from-practice-green-dark to-practice-green-light">
           <div>
             <Practices/>
           </div>
         </Section>
-        <Section title='Contact' color='white' name='contact' bgImg={flo_shadow}>
+        <Section 
+          title='Contact' 
+          textColor='text-white' 
+          name='contact' bgImg={flo_shadow}>
           <div className='overflow-hidden'>
             <Contact handleStory={story} setHandleStory={setStory}/>
           </div>
         </Section>
-        {story && (<Section color='white' name='story'>
+        {story && (<Section textColor='text-white' name='story'>
           <div className='p-5'>
             <Story/>
           </div>
