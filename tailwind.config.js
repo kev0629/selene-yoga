@@ -16,7 +16,6 @@ module.exports = {
     },
     fontFamily:{
       serif:["mistral"],
-      main:["kaisei"]
     }
   },
   },
