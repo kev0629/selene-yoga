@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -11,9 +12,11 @@ const Intro = (props: Props) => {
             celle d’embrasser votre destin.
         </div>
         <div className='m-5 flex justify-center'>
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className=' bg-white border rounded-lg border-selene-blue p-1 text-selene-green text-base px-11'>
-            Ce qui oeuvre ici
-          </motion.button>
+          <Link href="/Oeuvre">
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className=' bg-white border rounded-lg border-selene-blue p-1 text-selene-green text-base px-11'>
+              Ce qui oeuvre ici
+            </motion.button>
+          </Link>
         </div>
         
     </div>

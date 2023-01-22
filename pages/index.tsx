@@ -33,7 +33,12 @@ export default function Home() {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
-        <Modal/>
+        <Modal>
+          A toi qui viens animer ces mots,
+          De l’étincelle de ton regard, 
+          Bienvenue et merci, 
+          Pour ce dialogue de lumière.
+        </Modal>
         <Section name='home' bgImg={moutain_lake}>
           <div className='p-5'>
             <Intro/>

@@ -27,10 +27,6 @@ const Footer = (props: Props) => {
             <div>0400 Vence</div>
           </div>
         </div>
-        
-         
-
-
       </footer>
     </>
     

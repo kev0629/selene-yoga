@@ -1,12 +1,11 @@
-import React from 'react'
+import React, {PropsWithChildren} from 'react'
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
-type Props = {}
+type Props = PropsWithChildren<{}>
 
 const Modal = (props: Props) => {
-    const [open, setOpen] = useState(true)
-
+  const [open, setOpen] = useState(true)
   const cancelButtonRef = useRef(null)
 
   return (
@@ -63,10 +62,7 @@ const Modal = (props: Props) => {
                       
                       <div className="mt-2">
                         <p className="text-sm ">
-                        A toi qui viens animer ces mots,
-                        De l’étincelle de ton regard, 
-                        Bienvenue et merci, 
-                        Pour ce dialogue de lumière.
+                          {props.children}
                         </p>
                       </div>
                     </div>
