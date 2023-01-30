@@ -12,7 +12,7 @@ type Props = {}
 type CardProps ={
   title:string,
   img?: any
-  href?:string;
+  href?:any;
 }
 
 const CaresCard = (props:CardProps) => {

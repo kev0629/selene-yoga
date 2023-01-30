@@ -1,5 +1,8 @@
 import {motion} from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import img from './../Images/clipart177003 1.svg'
 
 type Props = {}
 
@@ -17,6 +20,10 @@ const Intro = (props: Props) => {
               Ce qui oeuvre ici
             </motion.button>
           </Link>
+        </div>
+        <div className='flex flex-col justify-center items-center mt-32'>
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
         
     </div>
