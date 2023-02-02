@@ -1,6 +1,8 @@
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 import img from './../Images/clipart177003 1.svg'
 
@@ -21,10 +23,45 @@ const Intro = (props: Props) => {
             </motion.button>
           </Link>
         </div>
-        <div className='flex flex-col justify-center items-center mt-32'>
+        {/* <div className='flex flex-col justify-center items-center mt-32'> */}
+        <Carousel 
+          className='mt-24' 
+          showStatus={false} 
+          showArrows={false} 
+          showIndicators={false} 
+          autoPlay={true} 
+          interval={5000} 
+          infiniteLoop={true}>
+        <div >
           <Image src={img}  alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
+        <div>
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div >
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div >
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div >
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div >
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        </Carousel>
+        {/* <div>
+          <Image src={img}  alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div> */}
+        {/* </div> */}
         
     </div>
   )

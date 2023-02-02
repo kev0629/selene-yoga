@@ -38,8 +38,7 @@ const News = (props: Props) => {
   return (
     <section>
       {/* <div className='flex flex-col justify-center'> */}
-        <Carousel showStatus={false} emulateTouch={true} showArrows={false}
-        centerMode centerSlidePercentage={50}>
+        <Carousel showStatus={false} emulateTouch={true} showArrows={false} >
         <Card 
           img={img}
           title='Titre'
