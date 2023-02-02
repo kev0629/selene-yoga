@@ -1,0 +1,14 @@
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.control-dots {
+    position: relative !important
+}
