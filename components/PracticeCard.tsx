@@ -1,10 +1,12 @@
 import Image,{StaticImageData} from "next/image";
 import {motion} from "framer-motion"
 import { useRotate } from "./../hooks/useRotate";
+import { ReactElement } from "react";
 
 type CardProps = {
-    title:string,
+    mainTitle:ReactElement,
     img:StaticImageData
+    secondaryTitle?:ReactElement,
     rotate?:number
   }
 
@@ -23,7 +25,7 @@ const PracticeCard = (props: CardProps) => {
   }} whileTap={{
     scale: 0.9
   }} className="relative min-w-fit m-2 rounded-xl overflow-hidden shadow-lg">
-          <div className='flex justify-center h-28 w-48'>
+          <div className='flex justify-center h-40 w-56'>
             {front && <motion.p initial={{
         opacity: 0
       }} animate={{
@@ -31,7 +33,7 @@ const PracticeCard = (props: CardProps) => {
         transition: {
           duration: 2
         }
-      }} className=' relative z-[1] text-white text-base pt-10 '>{props.title}</motion.p>}
+      }} className=' relative z-[1] text-white text-base pt-10 '>{props.mainTitle}</motion.p>}
             {!front && <motion.p initial={{
         rotateX: 180,
         opacity: 0
