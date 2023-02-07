@@ -7,6 +7,7 @@ type CardProps = {
     mainTitle:ReactElement,
     img:StaticImageData
     secondaryTitle?:ReactElement,
+    text?:string,
     rotate?:number
   }
 
@@ -25,16 +26,27 @@ const PracticeCard = (props: CardProps) => {
   }} whileTap={{
     scale: 0.9
   }} className="relative min-w-fit m-2 rounded-xl overflow-hidden shadow-lg">
-          <div className='flex justify-center h-40 w-56'>
-            {front && <motion.p initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1,
-        transition: {
-          duration: 2
-        }
-      }} className=' relative z-[1] text-white text-base pt-10 '>{props.mainTitle}</motion.p>}
-            {!front && <motion.p initial={{
+          <div className='flex flex-col justify-center h-64 w-80'>
+            {front && (<>
+                        <motion.div initial={{opacity: 0}} 
+                                    animate={{
+                                      opacity: 1,
+                                      transition: {duration: 2}
+                                    }} 
+                                    className='relative z-[1] text-white text-base leading-5 mb-10'>
+                                      {props.mainTitle}
+                        </motion.div>
+                        <motion.div initial={{opacity: 0}} 
+                        animate={{
+                          opacity: 1,
+                          transition: {duration: 2}
+                        }} 
+                        className='relative z-[1] text-white text-base leading-5'>
+                          {props.secondaryTitle}
+                        </motion.div>
+                      </>
+                        )}
+            {!front && <motion.div initial={{
         rotateX: 180,
         opacity: 0
       }} animate={{
@@ -42,7 +54,7 @@ const PracticeCard = (props: CardProps) => {
         transition: {
           duration: 2
         }
-      }} className=' relative z-[1] text-white text-center text-xs p-2'>Facilite le Yi king, l’astrologie, le référentiel de naissance et le design humain, qui offrent à travers des représentations une perspective globale de notre fonctionnement.</motion.p>}
+      }} className=' relative z-[1] text-white text-center text-sm p-2'>{props.text}</motion.div>}
           </div>
           <Image src={props.img} alt="Mountains sunset" fill placeholder='blur' />
       </motion.div>;
