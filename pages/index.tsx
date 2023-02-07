@@ -19,6 +19,7 @@ import Practices from '../components/Practices'
 import Modal from '../components/Modal'
 import Story from '../components/Story'
 import Yogastro from '../components/yogastro'
+import Price from '../components/Price'
 
 
 
@@ -84,6 +85,14 @@ export default function Home() {
           bg="gradient-to-b from-practice-green-dark to-practice-green-light">
           <div>
             <Practices/>
+          </div>
+        </Section>
+        <Section title='Tarifs' 
+                 name='prices'
+                 textColor='text-white'
+                 bg="practice-green-light">
+          <div className='p-5'>
+            <Price/>
           </div>
         </Section>
         <Section 
