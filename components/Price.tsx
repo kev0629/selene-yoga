@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{ReactElement, useState} from 'react'
 import {
   ColumnDef,
   createColumnHelper,
@@ -9,7 +9,7 @@ import {
 
 type HealthTable = {
   title:String,
-  val:string,
+  val:string | ReactElement,
 }
 
 const columnHelper = createColumnHelper<HealthTable>()
@@ -17,7 +17,7 @@ const columnHelper = createColumnHelper<HealthTable>()
 const columns = [
   columnHelper.group({
     id: 'Soin',
-    header: () => <span>Soin</span>,
+    header: () => <div>Soin</div>,
     columns: [
       columnHelper.accessor('title', {
         cell: info => info.getValue(),
@@ -32,7 +32,16 @@ const columns = [
 const defaultData: HealthTable[] = [
   {
     title:"Pratique",
-    val:"Massage bien-être Tao soin Reïki",
+    val:<span>Massage bien-être 
+      <ul>
+        <li>
+        Tao
+        </li>
+        <li>
+        soin Reïki
+        </li>
+      </ul>
+      </span>,
   },
   {
     title:"Durée",
@@ -58,11 +67,12 @@ const PricesTable = (props:PropsTable) => {
       })
   console.log(table.getHeaderGroups())
   return (
-      <table>
+    <div className='bg-white flex justify-center rounded-md'>
+      <table className='text-base bg-white '>
         <thead>
             <tr> 
               {table.getHeaderGroups()[0].headers.map(header => (
-                <th key={header.id} colSpan={header.colSpan}>
+                <th key={header.id} colSpan={header.colSpan} className='font-serif font-light text-4xl border-b border-black'>
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -75,7 +85,7 @@ const PricesTable = (props:PropsTable) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map(row => (
-            <tr key={row.id}>
+            <tr key={row.id} className='border-b'>
               {row.getVisibleCells().map(cell => (
                 <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -101,6 +111,7 @@ const PricesTable = (props:PropsTable) => {
           ))}
         </tfoot>
       </table>
+    </div>
   )
 }
 

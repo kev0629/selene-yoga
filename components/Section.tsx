@@ -1,5 +1,6 @@
 import {ReactNode} from 'react'
 import Image,{StaticImageData} from 'next/image'
+import clsx from 'clsx'
 
 type Props = {
   children: ReactNode,
@@ -22,7 +23,9 @@ const Section = (props: Props) => {
         <Image src={props.bgImg} alt="Mountains with snow" fill 
            style={{objectFit:'cover'}} blurDataURL=''/>
       </div>}
-      <div className={`border-b border-white mb-[0.1px] bg-${props.bg}`}>
+      <div className={clsx("border-b border-white mb-[0.1px]",
+                          props.bg && `${props.bg}`
+                          )}>
         {props.title && <div className={`text-3xl pt-5 text-center mx-10 font-serif  ${props.textColor}`}>{props.title}</div>}
         <div className="flex justify-center">
         {props.title &&  <div className={`border-t-2 ${props.borderColor} w-20 h-1`}></div>}
