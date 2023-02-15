@@ -19,7 +19,7 @@ const Yogastrologie = (props: Props) => {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <div className='text-center font-serif uppercase text-4xl m-6 underline underline-offset-8 text-selene-green'>Yogastrologie</div>
-        <Image src={img1} alt={'Mountain lake'}/>
+        <Image src={img1} alt={'Mountain lake'} placeHolder='blur'/>
         <p className='p-10 text-center text-base'>
         Que cela soit par les postures, les pranayama (travail du souffle), les chants ou les méditations orientées ;<br/>
         Chacun sera amené à s’approprier les outils pour restaurer son énergie et cultiver son bien-être,
