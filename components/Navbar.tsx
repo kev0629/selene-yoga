@@ -34,13 +34,12 @@ const Navbar = ({}: Props) => {
       <nav className="fixed z-[10] w-[100%] flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-1 bg-gradient-to-b from-selene-green to-selene-green-dark">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
-            <a
-              className="text-3xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"
-              href="#pablo"
-            >
-              <div className='font-serif'>Séléné yoga</div>
-              <div className='pl-20 text-xs'>by florian Ponte</div>
-            </a>
+            <Link href="/#home">
+              <div className="text-3xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white">
+                <div className='font-serif'>Séléné yoga</div>
+                <div className='pl-20 text-xs'>by florian Ponte</div>
+              </div>
+            </Link>
             <button
               className="text-white cursor-pointer text-xl leading-none px-1 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"

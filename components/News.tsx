@@ -38,7 +38,7 @@ const News = (props: Props) => {
   return (
     <section>
       {/* <div className='flex flex-col justify-center'> */}
-        <Carousel showStatus={false} emulateTouch={true} showArrows={false} >
+        <Carousel showStatus={false} showThumbs={false} emulateTouch={true} showArrows={false} >
         <Card 
           img={img}
           title='Titre'

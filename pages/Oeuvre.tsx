@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import img from '../Images/mountain_sky_star.jpg'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -15,6 +17,7 @@ const Oeuvre = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
+        <Image src={img} alt={'moutain sky star'} />
         <p className='p-10 text-center'>
           L’intention :
           <br />

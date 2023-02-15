@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import StarButton from '../components/StarButton'
+import Image from 'next/image'
+import img2 from '../Images/mountain_sunset.jpg'
 
 type Props = {}
 
@@ -16,6 +18,7 @@ const Rencontres = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
+        <Image src={img2} alt={'Mountain sunset'}/>
         <p className='p-10 text-center'>
           Que cela soit à travers des ateliers, des séminaires ou des stages, 
           j’ai plaisir à animer ces évènements dans une dimension de partage, d’ouverture, 

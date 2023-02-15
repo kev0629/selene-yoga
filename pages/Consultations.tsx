@@ -1,8 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import StarButton from '../components/StarButton'
+import img1 from '../Images/moutain_stars_lake.png'
 
 type Props = {}
 
@@ -16,6 +18,7 @@ const consultation_individuel = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
+        <Image src={img1} alt={'Mountain lake'}/>
         <p className='p-10 text-center'>
         Je me propose de vous aider par deux voies complémentaires :
         <br />
