@@ -28,7 +28,8 @@ const Intro = (props: Props) => {
           className='mt-24' 
           showStatus={false} 
           showArrows={false} 
-          showIndicators={false} 
+          showIndicators={false}
+          showThumbs={false}
           autoPlay={true} 
           interval={5000} 
           infiniteLoop={true}>
