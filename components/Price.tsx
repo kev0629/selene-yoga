@@ -157,27 +157,17 @@ const PricesTable = (props:PropsTable) => {
         columns,
         getCoreRowModel: getCoreRowModel(),
       })
-  console.log(table.getHeaderGroups())
   return (
     <div className='bg-white flex justify-center rounded-md'>
       <table className='text-base bg-white w-full m-2'>
         <thead>
             <tr> 
-              {/* {table.getHeaderGroups()[0].headers.map(header => ( */}
-                <th 
-                  // key={header.id} 
+                <th
                   colSpan={2} 
                   className='font-serif font-light text-4xl border-b border-black'
                   >
                   {props.title}
-                  {/* {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )} */}
                 </th>
-              {/* ))} */}
             </tr>
         </thead>
         <tbody>
@@ -186,7 +176,6 @@ const PricesTable = (props:PropsTable) => {
               {row.getVisibleCells().map(cell => (
                 <td key={cell.id} >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  {/* {row.id} */}
                 </td>
               ))}
             </tr>
