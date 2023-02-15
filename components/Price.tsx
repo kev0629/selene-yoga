@@ -9,20 +9,28 @@ import {
 
 type HealthTable = {
   title:String,
-  val:string | ReactElement,
+  val1:string | ReactElement,
+  val2?:string | ReactElement,
+  val3?:string | ReactElement,
 }
 
 const columnHelper = createColumnHelper<HealthTable>()
 
 const columns = [
   columnHelper.group({
-    id: 'Soin',
-    header: () => <div>Soin</div>,
+    id: 'Soins',
+    header: () => <div>Soins</div>,
     columns: [
       columnHelper.accessor('title', {
         cell: info => info.getValue(),
       }),
-      columnHelper.accessor('val', {
+      columnHelper.accessor('val1', {
+        cell: info => info.getValue(),
+      }),
+      columnHelper.accessor('val2', {
+        cell: info => info.getValue(),
+      }),
+      columnHelper.accessor('val3', {
         cell: info => info.getValue(),
       })
     ],
@@ -32,8 +40,8 @@ const columns = [
 const defaultData: HealthTable[] = [
   {
     title:"Pratique",
-    val:<span>Massage bien-être 
-      <ul>
+    val1:<span>Massage bien-être 
+      <ul className='list-disc list-inside'>
         <li>
         Tao
         </li>
@@ -45,11 +53,13 @@ const defaultData: HealthTable[] = [
   },
   {
     title:"Durée",
-    val:"1h 1h30",
+    val1:"1h",
+    val2:"1h30",
   },
   {
     title:"Tarifs",
-    val:"60€ 80€",
+    val1:"60€",
+    val2:"80€"
   },
   
 ]
@@ -68,7 +78,7 @@ const PricesTable = (props:PropsTable) => {
   console.log(table.getHeaderGroups())
   return (
     <div className='bg-white flex justify-center rounded-md'>
-      <table className='text-base bg-white '>
+      <table className='text-base bg-white w-full m-2'>
         <thead>
             <tr> 
               {table.getHeaderGroups()[0].headers.map(header => (
@@ -85,31 +95,15 @@ const PricesTable = (props:PropsTable) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map(row => (
-            <tr key={row.id} className='border-b'>
+            <tr key={row.id} className='border-t'>
               {row.getVisibleCells().map(cell => (
-                <td key={cell.id}>
+                <td key={cell.id} className='w-1/3'>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
             </tr>
           ))}
         </tbody>
-        <tfoot>
-          {table.getFooterGroups().map(footerGroup => (
-            <tr key={footerGroup.id}>
-              {footerGroup.headers.map(header => (
-                <th key={header.id} colSpan={header.colSpan}>
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.footer,
-                        header.getContext()
-                      )}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </tfoot>
       </table>
     </div>
   )
