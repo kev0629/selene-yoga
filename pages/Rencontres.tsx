@@ -18,7 +18,16 @@ const Rencontres = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
-        <Image src={img2} alt={'Mountain sunset'}/>
+        <div  className="relative h-32 overflow-hidden">
+          <div className='flex flex-col justify-center center-content h-full'>
+            <div>
+              <div className=' relative z-[1] text-center text-white bold text-4xl font-serif'>Rencontres collectives</div>
+            </div>
+          </div>
+        <Image src={img2} alt={'Mountain sunset'}
+        fill
+        placeholder='blur'/>
+        </div>
         <p className='p-10 text-center'>
           Que cela soit à travers des ateliers, des séminaires ou des stages, 
           j’ai plaisir à animer ces évènements dans une dimension de partage, d’ouverture, 

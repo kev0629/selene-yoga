@@ -17,7 +17,14 @@ const Oeuvre = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
-        <Image src={img} alt={'moutain sky star'} />
+        <div  className="relative h-32 overflow-hidden">
+          <div className='flex flex-col justify-center center-content h-full'>
+            <div>
+              <div className=' relative z-[1] text-center text-white bold text-4xl font-serif'>Consultations <br/>Individuelles</div>
+            </div>
+          </div>
+        <Image src={img} alt={'moutain sky star'} fill  placeholder='blur'/>
+        </div>
         <p className='p-10 text-center'>
           L’intention :
           <br />

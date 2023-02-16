@@ -18,8 +18,21 @@ const consultation_individuel = (props: Props) => {
       </Head>
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
-        <Image src={img1} alt={'Mountain lake'}/>
-        <p className='p-10 text-center'>
+          
+        <div  className="relative h-32 overflow-hidden">
+          <div className='flex flex-col justify-center center-content h-full'>
+            <div>
+              <div className=' relative z-[1] text-center text-white bold text-4xl font-serif'>Ce qui oeuvre ici</div>
+            </div>
+          </div>
+          <Image
+           src={img1}
+           alt="Mountains sunset"
+           fill
+           placeholder='blur'
+            /> 
+        </div>
+        <p className='p-8 text-center'>
         Je me propose de vous aider par deux voies complémentaires :
         <br />
         - La voie de la conscience

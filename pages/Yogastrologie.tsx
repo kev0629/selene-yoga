@@ -19,8 +19,18 @@ const Yogastrologie = (props: Props) => {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <div className='text-center font-serif uppercase text-4xl m-6 underline underline-offset-8 text-selene-green'>Yogastrologie</div>
-        <Image src={img1} alt={'Mountain lake'} placeHolder='blur'/>
-        <p className='p-10 text-center text-base'>
+        <div  className="relative h-96 overflow-hidden">
+          <div className='flex flex-col justify-center center-content h-full'>
+            <div className='flex flex-col justify-between h-full'>
+              <div className=' relative z-[1] text-center text-white bold text-xl'>Ou la science de la reliance de l’être</div>
+              <div className=' relative z-[1] text-center text-white bold text-xl'>Prochainement à eklore, une nouvelle graine va tenter sa percée au grand jour :
+Une rencontre du monde énergétique oriental et du symbolisme occidental,
+Mis en mouvement dans une approche sensorielle.</div>
+            </div>
+          </div>
+        <Image src={img1} alt={'Mountain lake'} fill placeholder='blur'/>
+        </div>
+        <p className='p-3 text-center text-base'>
         Que cela soit par les postures, les pranayama (travail du souffle), les chants ou les méditations orientées ;<br/>
         Chacun sera amené à s’approprier les outils pour restaurer son énergie et cultiver son bien-être,
         En explorant sensiblement sa nature élémentaire et la danse des énergies actuelles.<br/>
