@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import Image from 'next/image'
 import img from '../Images/daniel-roe-lpjb_UMOyx8-unsplash.jpg'
 import StarButton from './StarButton'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { useDimension } from '../hooks/useDimension'
 
 
 
@@ -16,6 +17,7 @@ type CardProps ={
 }
 
 const Card = ({img, title, subTitle}:CardProps) => {
+
   return(
     <div className="max-w-sm bg-white drop-shadow-lg w-56 m-2">
       <div className="flex justify-center relative">
@@ -35,11 +37,51 @@ const Card = ({img, title, subTitle}:CardProps) => {
 
 
 const News = (props: Props) => {
+  const [percent, setPercent] = useState(100)
+  const [center, setCenter] = useState(false)
+  const [fullScreen, setFullScreen] = useState(false)
+
+  const windowsWidth = useDimension()
+ useEffect(() => {
+  if (windowsWidth>=1280){
+    setCenter(true)
+    setPercent(25)
+    setFullScreen(true)
+   }
+   if (windowsWidth>=1024 && windowsWidth<1280){
+    setCenter(true)
+    setPercent(33)
+    setFullScreen(false)
+   }
+   if (windowsWidth>=768 && windowsWidth<1024){
+    setCenter(true)
+    setPercent(50)
+    setFullScreen(false)
+   }
+   else if (windowsWidth<768)
+   {
+    setCenter(false)
+    setPercent(100)
+    setFullScreen(false)
+   }
+   
+ 
+ }, [windowsWidth])
   return (
     <section>
       {/* <div className='flex flex-col justify-center'> */}
-        <Carousel showStatus={false} showThumbs={false} emulateTouch={true} showArrows={false} >
+        <Carousel showStatus={false} showThumbs={false} showIndicators={fullScreen ?false:true} emulateTouch={true} showArrows={false} centerMode={center} centerSlidePercentage={percent} >
         <Card 
+          img={img}
+          title='Titre'
+          subTitle='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'
+          />
+          <Card 
+          img={img}
+          title='Titre'
+          subTitle='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'
+          />
+          <Card 
           img={img}
           title='Titre'
           subTitle='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'

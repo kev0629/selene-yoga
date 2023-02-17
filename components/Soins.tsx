@@ -17,7 +17,7 @@ type CardProps ={
 
 const CaresCard = (props:CardProps) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }} className="relative h-32 rounded-xl overflow-hidden">
+    <motion.div whileHover={{ scale: 1.1 }} className="relative h-32 w-72 rounded-xl overflow-hidden md:h-40 md:w-96">
       <div className='flex flex-col justify-center center-content mt-6'>
         <div>
           <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
@@ -43,10 +43,10 @@ const CaresCard = (props:CardProps) => {
 const Soins = (props: Props) => {
   return (
     <>
-    <div className="flex flex-col content-center m-auto uppercase text-center w-5/6 space-y-5 h-96">
-        <CaresCard title={'Consultations individuelles'} img={img1} href='/Consultations'/>
-        <CaresCard title={'Rencontres Colectives'} img={img2} href='/Rencontres'/>
-    </div>
+      <div className="flex flex-col justify-around content-center items-center uppercase text-center h-96 md:flex-row md:h-72">
+          <CaresCard title={'Consultations individuelles'} img={img1} href='/Consultations'/>
+          <CaresCard title={'Rencontres Colectives'} img={img2} href='/Rencontres'/>
+      </div>
     </>
   )
 }

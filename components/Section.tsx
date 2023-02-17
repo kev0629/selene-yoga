@@ -10,6 +10,7 @@ type Props = {
   borderColor?: string,
   textColor?: string,
   bgImg?:StaticImageData,
+  bgPosition?:string
 
 }
 
@@ -21,7 +22,7 @@ const Section = (props: Props) => {
       <div className='absolute z-[-1] w-screen h-full overflow-hidden' style={{
       }}>
         <Image src={props.bgImg} alt="Mountains with snow" fill 
-           style={{objectFit:'cover'}} blurDataURL=''/>
+            blurDataURL='' className={clsx('object-cover',props.bgPosition)}/>
       </div>}
       <div className={clsx("border-b border-white mb-[0.1px]",
                           props.bg && `${props.bg}`

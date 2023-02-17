@@ -19,18 +19,19 @@ const consultation_individuel = (props: Props) => {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
           
-        <div  className="relative h-32 overflow-hidden">
-          <div className='flex flex-col justify-center center-content h-full'>
-            <div>
-              <div className=' relative z-[1] text-center text-white bold text-4xl font-serif'>Ce qui oeuvre ici</div>
-            </div>
-          </div>
+        <div  className="relative h-32">
           <Image
            src={img1}
            alt="Mountains sunset"
            fill
+           style={{objectFit:"cover"}}
            placeholder='blur'
             /> 
+          <div className='absolute inset-0 flex flex-col justify-center center-content items-center z-10'>
+            <div>
+              <div className='text-center text-white bold text-4xl font-serif'>Ce qui oeuvre ici</div>
+            </div>
+          </div>
         </div>
         <p className='p-8 text-center'>
         Je me propose de vous aider par deux voies complémentaires :

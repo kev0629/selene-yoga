@@ -40,11 +40,11 @@ export default function Home() {
           Bienvenue et merci, 
           Pour ce dialogue de lumière.
         </Modal>
-        <Section name='home' bgImg={moutain_lake}>
-          <div className='p-5'>
-            <Intro/>
-          </div>
-        </Section>
+          <Section name='home' bgImg={moutain_lake} bgPosition='custom-object-position'>
+            <div className='p-5'>
+              <Intro/>
+            </div>
+          </Section>
         <Section name='yogastro' bgImg={green_stars}>
           <div className='p-5'>
             <Yogastro/>
@@ -73,7 +73,8 @@ export default function Home() {
           borderColor='border-selene-green' 
           textColor='text-selene-green' 
           name='health' 
-          bgImg={sunshide_mountain}>
+          bgImg={sunshide_mountain}
+          bgPosition='object-bottom'>
           <div className='p-5'>
             <Soins/>
           </div>

@@ -1,11 +1,12 @@
 import PracticeCard from './PracticeCard';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import Carousel from './Carousel'
 import { Carousel } from 'react-responsive-carousel';
 import img1 from '../Images/Moutain_cloud.jpg'
 import img4 from '../Images/stars.png'
 import img3 from '../Images/galaxy-mountain.jpg'
 import img2 from '../Images/forest_river.png'
+import { useDimension } from '../hooks/useDimension';
 
 
 
@@ -15,6 +16,36 @@ type Props = {}
 
 
 const Practices = (props: Props) => {
+  const [percent, setPercent] = useState(100)
+  const [center, setCenter] = useState(false)
+  const [fullScreen, setFullScreen] = useState(false)
+
+  const windowsWidth = useDimension()
+ useEffect(() => {
+  if (windowsWidth>1280){
+    setCenter(true)
+    setPercent(25)
+    setFullScreen(true)
+   }
+   if (windowsWidth>=1024 && windowsWidth<=1280){
+    setCenter(true)
+    setPercent(33)
+    setFullScreen(false)
+   }
+   if (windowsWidth>=768 && windowsWidth<1024){
+    setCenter(true)
+    setPercent(45)
+    setFullScreen(false)
+   }
+   else if (windowsWidth<768)
+   {
+    setCenter(false)
+    setPercent(90)
+    setFullScreen(false)
+   }
+   
+ 
+ }, [windowsWidth])
   const cardsContent = [
     {
       mainTitle:<div className='uppercase'>{"L’approche physique"}</div>,
@@ -56,7 +87,7 @@ const Practices = (props: Props) => {
   ]
   return (
     <div className='my-10'>
-     <Carousel showStatus={false} emulateTouch={true} showIndicators={false} centerMode={true} centerSlidePercentage={90} showThumbs={false}>
+     <Carousel showStatus={false} emulateTouch={true} showIndicators={false} centerMode={center} centerSlidePercentage={percent} showThumbs={false}>
       {cardsContent.map((card,id) => <PracticeCard mainTitle={card.mainTitle} secondaryTitle={card.secondaryTitle} img={card.img} key={id} text={card.text}/>)}
     </Carousel>
     </div>

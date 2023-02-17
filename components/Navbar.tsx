@@ -31,7 +31,7 @@ const Navbar = ({}: Props) => {
 
   return (
     <>
-      <nav className="fixed z-[10] w-[100%] flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-1 bg-gradient-to-b from-selene-green to-selene-green-dark">
+      <nav className="fixed z-20 w-full flex flex-wrap items-center justify-between drop-shadow-lg px-2 py-1 bg-gradient-to-b from-selene-green to-selene-green-dark">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <Link href="/#home">
@@ -80,9 +80,6 @@ const Navbar = ({}: Props) => {
             </button>
           </div>
           <motion.div
-            // className={`md:flex flex-grow items-center${
-            //   navbarOpen ? ' flex' : ' hidden'
-            // }`}
             className="md:flex flex-grow items-center overflow-hidden"
             initial = {{height:0, opacity:0}}
             animate={navbarOpen ? 

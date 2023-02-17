@@ -10,7 +10,8 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div className='h-96'>
+    <div className='h-96 flex flex-col justify-between'>
+      <div>
         <div className='text-3xl text-center font-serif text-selene-green'>
             Séléné Yoga vous invite 
             à votre seule réelle liberté,
@@ -23,9 +24,10 @@ const Intro = (props: Props) => {
             </motion.button>
           </Link>
         </div>
+      </div>
         {/* <div className='flex flex-col justify-center items-center mt-32'> */}
         <Carousel 
-          className='mt-24' 
+          // className='mt-28'
           showStatus={false} 
           showArrows={false} 
           showIndicators={false}
