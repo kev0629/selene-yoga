@@ -17,8 +17,8 @@ type CardProps ={
 
 const CaresCard = (props:CardProps) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }} className="relative h-32 w-72 rounded-xl overflow-hidden md:h-40 md:w-96">
-      <div className='flex flex-col justify-center center-content mt-6'>
+    <motion.div whileHover={{ scale: 1.1 }} className="relative h-32 w-72 flex flex-col justify-center center-content rounded-xl overflow-hidden md:h-40 md:w-96  ">
+      <div className='flex flex-col justify-center space-y-2 center-content'>
         <div>
           <p className=' relative z-[1] text-white bold text-base'>{props.title}</p>
         </div>
