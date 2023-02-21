@@ -13,7 +13,7 @@ type Props = {
 const Contact = (props: Props) => {
   return (
     <>
-    <div className="flex justify-center flex-col h-max md:h-[32rem] lg:h-[40-rem]">
+    <div className="flex justify-center flex-col h-max md:h-[32rem] lg:h-[40rem]">
         
         <div className="flex justify-center mt-10">
             
