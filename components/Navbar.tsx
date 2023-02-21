@@ -1,12 +1,12 @@
-import {useState, useRef, useEffect, MutableRefObject} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import { useDimension } from '../hooks/useDimension'
 import Link from 'next/link'
 import {motion} from "framer-motion"
  
 
-type Props = {}
 
-const Navbar = ({}: Props) => {
+
+const Navbar = () => {
  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
  const burgerButton = useRef(null);
 
@@ -90,7 +90,7 @@ const Navbar = ({}: Props) => {
             <ul className="flex flex-col md:flex-row list-none md:ml-auto">
                 <li className="nav-item">
                   <Link  href="/#home"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center  leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
                   >
                     <span className="ml-2">Home</span>
@@ -98,7 +98,7 @@ const Navbar = ({}: Props) => {
                 </li>
                 <li className="nav-item">
                   <Link  href="/#yogastro"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
 
                   >
@@ -107,7 +107,7 @@ const Navbar = ({}: Props) => {
                 </li>
                 <li className="nav-item">
                   <Link  href="/#actu"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
                   >
                     <span className="ml-2">Acualité - Évènements</span>
@@ -115,7 +115,7 @@ const Navbar = ({}: Props) => {
                 </li>
                 <li className="nav-item">
                   <Link  href="/#news"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
                   >
                     <span className="ml-2">Articles</span>
@@ -123,7 +123,7 @@ const Navbar = ({}: Props) => {
                 </li>
                 <li className="nav-item">
                   <Link  href="/#health"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
                   >
                     <span className="ml-2">Les soins</span>
@@ -131,7 +131,7 @@ const Navbar = ({}: Props) => {
                 </li>
                 <li className="nav-item">
                   <Link  href="/#practices"
-                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75"
                     onClick={handleNavbar}
                   >
                     <span className="ml-2">Les pratiques</span>
@@ -149,7 +149,6 @@ const Navbar = ({}: Props) => {
           </motion.div>
         </div>
       </nav>
-      <div className='h-[88.75px]'></div>
     </>
   )
 }

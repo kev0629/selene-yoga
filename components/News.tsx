@@ -21,7 +21,7 @@ const Card = ({img, title, subTitle}:CardProps) => {
   return(
     <div className="max-w-sm bg-white drop-shadow-lg w-56 m-2">
       <div className="flex justify-center relative">
-        <Image className="w-56 h-32" src={img} alt="" height={120} placeholder={'blur'} />
+        <Image className="w-56 h-32 object-cover object-center" src={img} alt="" height={120} placeholder={'blur'} />
       </div>
       <div className=" flex flex-col px-5 pt-5">
           <h5 className="mb-2 text-2xl text-center text-black">{title}</h5>

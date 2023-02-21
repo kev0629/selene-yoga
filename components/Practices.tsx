@@ -19,6 +19,7 @@ const Practices = (props: Props) => {
   const [percent, setPercent] = useState(100)
   const [center, setCenter] = useState(false)
   const [fullScreen, setFullScreen] = useState(false)
+  const [arrowBool , setArrowBool] = useState(true)
 
   const windowsWidth = useDimension()
  useEffect(() => {
@@ -26,22 +27,26 @@ const Practices = (props: Props) => {
     setCenter(true)
     setPercent(25)
     setFullScreen(true)
+    setArrowBool(false)
    }
    if (windowsWidth>=1024 && windowsWidth<=1280){
     setCenter(true)
     setPercent(33)
     setFullScreen(false)
+    setArrowBool(true)
    }
    if (windowsWidth>=768 && windowsWidth<1024){
     setCenter(true)
     setPercent(45)
     setFullScreen(false)
+    setArrowBool(true)
    }
    else if (windowsWidth<768)
    {
     setCenter(false)
     setPercent(90)
     setFullScreen(false)
+    setArrowBool(true)
    }
    
  
@@ -87,7 +92,7 @@ const Practices = (props: Props) => {
   ]
   return (
     <div className='my-10'>
-     <Carousel showStatus={false} emulateTouch={true} showIndicators={false} centerMode={center} centerSlidePercentage={percent} showThumbs={false}>
+     <Carousel showStatus={false} emulateTouch={true} showIndicators={false} showArrows={arrowBool} centerMode={center} centerSlidePercentage={percent} showThumbs={false}>
       {cardsContent.map((card,id) => <PracticeCard mainTitle={card.mainTitle} secondaryTitle={card.secondaryTitle} img={card.img} key={id} text={card.text}/>)}
     </Carousel>
     </div>

@@ -9,7 +9,7 @@ type Props = {
 }
 const ActuComponent = (props: Props) => {
   return <>
-    <div className="flex flex-row justify-center content-center space-x-2 text-base my-4">
+    <div className="flex flex-row justify-left content-center space-x-2 text-base my-4">
       <div className="relative  w-32 h-24 rounded-xl overflow-hidden md:w-44 md:h-36">
         <div className='flex flex-col justify-center center-content mt-6'>
         </div>

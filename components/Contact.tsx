@@ -1,7 +1,6 @@
 import Circle from './Circle';
-import { useState } from "react"
 import {motion} from "framer-motion"
-import reverse_triangle from "../Images/reverse_triangle.svg"
+import clsx from 'clsx';
 
 type Props = {
     handleStory : boolean
@@ -13,17 +12,19 @@ type Props = {
 const Contact = (props: Props) => {
   return (
     <>
-    <div className="flex justify-center flex-col h-max md:h-[32rem] lg:h-[40rem]">
+    <div className="flex justify-center flex-col h-max md:h-[32rem] lg:h-[51rem]">
         
         <div className="flex justify-center mt-10">
             
-            <div className="bg-gradient-to-b relative text-black w-64 via-[#C0CCCE]/75 from-[#C0CCCE]/75 border pb-10 rounded-xl block text-center">
+            <div className={clsx("relative text-black bg-gradient-to-b  via-[#C0CCCE]/75 from-[#C0CCCE]/75 border pb-10 py-2 px-6 rounded-xl text-center",
+                                 " md:px-12",
+                                 "lg:px-24 ")}>
                 {/* <div className="absolute bottom-24 z-10 left-[-120px]">
                         <Circle/>
                 </div> */}
-                <div className="text-xl">Florian Ponte</div>
-                <div className="text-lg">florian.ponte@gmail.com</div>
-                <div className="text-lg">06.23.27.12.40</div>
+                <div className="text-xl md:text-2xl lg:text-5xl">Florian Ponte</div>
+                <div className="text-lg md:text-xl lg:text-3xl">florian.ponte@gmail.com</div>
+                <div className="text-lg md:text-xl lg:text-3xl">06.23.27.12.40</div>
             </div>
         </div>
         <div className="flex justify-center m-10">
