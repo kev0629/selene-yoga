@@ -10,7 +10,7 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div className='h-96 flex flex-col justify-between space'>
+    <div className='h-96 lg:h-[40rem] flex flex-col justify-between space'>
       <div>
         <div className='m-5 text-3xl text-center font-serif text-selene-green lg:text-5xl'>
             Séléné Yoga vous invite 

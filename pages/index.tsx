@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {useState} from 'react'
 
 import sunshide_mountain from '../Images/hill.svg'
-import moutain_lake from '../Images/mountain_lake_.png'
+import moutain_lake from '../Images/mountain_lake.png'
 import cloudy_mountain from '../Images/cloudy_mountain.jpg'
 import flo_shadow from '../Images/flo_shadow_2.svg'
 import green_stars from '../Images/green_stars.png'
@@ -41,7 +41,7 @@ export default function Home() {
           Bienvenue et merci, 
           Pour ce dialogue de lumière.
         </Modal>
-          <Section name='home' bgImg={cloudy_mountain} bgPosition='object-center'>
+          <Section name='home' bgImg={moutain_lake} bgPosition='object-center'>
             <div className='p-5'>
               <Intro/>
             </div>
