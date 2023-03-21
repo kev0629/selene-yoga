@@ -6,6 +6,21 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 import img from './../Images/clipart177003 1.svg'
 
+import arbre from './../Images/Postures/Arbre.svg'
+import arc from './../Images/Postures/arc.svg'
+import chameau from './../Images/Postures/Chameau.svg'
+import chat from './../Images/Postures/chat.svg'
+import enfant from './../Images/Postures/Enfant.svg'
+import etirement from './../Images/Postures/etirement.svg'
+import huitre from './../Images/Postures/Huitre.svg'
+import montagne from './../Images/Postures/Montagne.svg'
+import poisson from './../Images/Postures/Poisson.svg'
+import triangle from './../Images/Postures/triangle.svg'
+import warior1 from './../Images/Postures/warior1.svg'
+import warior2 from './../Images/Postures/warior2.svg'
+
+
+
 type Props = {}
 
 const Intro = (props: Props) => {
@@ -35,30 +50,54 @@ const Intro = (props: Props) => {
           autoPlay={true} 
           interval={5000} 
           infiniteLoop={true}>
-        <div >
-          <Image src={img}  alt='yoga'/>
+        <div className='w-10px h-10px'>
+          <Image src={arbre} alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
         <div>
-          <Image src={img}  alt='yoga'/>
+          <Image src={arc} alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        <div >
-          <Image src={img}  alt='yoga'/>
+        {/* <div className='w-30 h-30'>
+          <Image src={chameau}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        <div >
-          <Image src={img}  alt='yoga'/>
+        <div className='w-30 h-30'>
+          <Image src={chat}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        <div >
-          <Image src={img}  alt='yoga'/>
+        <div className='w-30 h-30'>
+          <Image src={enfant}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        <div >
-          <Image src={img}  alt='yoga'/>
+        <div className='w-30 h-30'>
+          <Image src={etirement}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
+        <div className='w-30 h-30'>
+          <Image src={huitre}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div className='w-30 h-30'>
+          <Image src={montagne}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div className='w-30 h-30'>
+          <Image src={poisson}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div className='w-30 h-30'>
+          <Image src={triangle}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div className='w-30 h-30'>
+          <Image src={warior1}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        <div className='w-30 h-30'>
+          <Image src={warior2}   alt='yoga'/>
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div> */}
         </Carousel>
         {/* <div>
           <Image src={img}  alt='yoga'/>
