@@ -25,7 +25,7 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div className='h-96 lg:h-[40rem] flex flex-col justify-between space'>
+    <div className='h-96 lg:h-[35rem] flex flex-col justify-between space'>
       <div>
         <div className='m-5 text-3xl text-center font-serif text-selene-green lg:text-5xl'>
             Séléné Yoga vous invite 
@@ -40,24 +40,26 @@ const Intro = (props: Props) => {
           </Link>
         </div>
       </div>
-        {/* <div className='flex flex-col justify-center items-center mt-32'> */}
         <Carousel 
-          // className='mt-28'
           showStatus={false} 
           showArrows={false} 
           showIndicators={false}
           showThumbs={false}
           autoPlay={true} 
-          interval={5000} 
+          // interval={5000} 
           infiniteLoop={true}>
-        <div className='w-10px h-10px'>
-          <Image src={arbre} alt='yoga'/>
+        <div>
+          <Image priority src={arbre} width={32} height={32} alt='yoga' />
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        <div>
+        <div className='w-10 h-10'>
+          <Image src={arbre} alt='yoga' />
+          <p className='mt-3 text-base'>Favoriser la santé</p>
+        </div>
+        {/* <div>
           <Image src={arc} alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
+        </div> */}
         {/* <div className='w-30 h-30'>
           <Image src={chameau}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
