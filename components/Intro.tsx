@@ -45,22 +45,18 @@ const Intro = (props: Props) => {
           showArrows={false} 
           showIndicators={false}
           showThumbs={false}
-          autoPlay={true} 
-          // interval={5000} 
+          autoPlay={true}
+          interval={2000} 
           infiniteLoop={true}>
-        <div>
-          <Image priority src={arbre} width={32} height={32} alt='yoga' />
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-10 h-10'>
+        <div >
           <Image src={arbre} alt='yoga' />
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
-        {/* <div>
+        <div>
           <Image src={arc} alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div> */}
-        {/* <div className='w-30 h-30'>
+        </div>
+        <div className='w-30 h-30'>
           <Image src={chameau}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
         </div>
@@ -99,7 +95,7 @@ const Intro = (props: Props) => {
         <div className='w-30 h-30'>
           <Image src={warior2}   alt='yoga'/>
           <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div> */}
+        </div>
         </Carousel>
         {/* <div>
           <Image src={img}  alt='yoga'/>
