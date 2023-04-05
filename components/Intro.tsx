@@ -4,8 +4,6 @@ import Image from 'next/image'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-import img from './../Images/clipart177003 1.svg'
-
 import arbre from './../Images/Postures/Arbre.svg'
 import arc from './../Images/Postures/arc.svg'
 import chameau from './../Images/Postures/Chameau.svg'
@@ -23,7 +21,72 @@ import warior2 from './../Images/Postures/warior2.svg'
 
 type Props = {}
 
-const Intro = (props: Props) => {
+const Intro = () => {
+
+  const postures = [
+    {
+      image: arbre,
+      text: "Balance : s’élever en lien",
+      key:0,
+    },
+    {
+      image: arc,
+      text: "Scorpion : rencontrer son intensité",
+      key:1,
+    },
+    {
+      image: chameau,
+      text: "Lion : déployer sa radiance posture du chameau",
+      key:2,
+    },
+    {
+      image: chat,
+      text: "Taureau : sublimer ses sens",
+      key:3,
+    },
+    {
+      image: enfant,
+      text: "Cancer : rencontrer sa sensibilité",
+      key:4,
+    },
+    {
+      image: etirement,
+      text: "Sagittaire : Suivre son étoile",
+      key:5,
+    },
+    {
+      image: huitre,
+      text: "Verseau : Embrasser sa liberté",
+      key:6,
+    },
+    {
+      image: montagne,
+      text: "Capricorne : incarner son idéal",
+      key:7,
+    },
+    {
+      image: poisson,
+      text: "Poisson : se fondre dans l’instant",
+      key:8,
+    },
+    {
+      image: triangle,
+      text: "Vierge : raffiner sa maitrise",
+      key:9,
+    },
+    {
+      image: warior1,
+      text: "Bélier : libérer son élan",
+      key:10,
+    },
+    {
+      image: warior2,
+      text: "Gémeaux : explorer nos talents",
+      key:11,
+    },
+    
+  ]
+
   return (
     <div className='h-96 lg:h-[35rem] flex flex-col justify-between space'>
       <div>
@@ -42,67 +105,24 @@ const Intro = (props: Props) => {
       </div>
         <Carousel 
           showStatus={false} 
-          showArrows={false} 
+          showArrows={true} 
           showIndicators={false}
           showThumbs={false}
           autoPlay={true}
           interval={2000} 
           infiniteLoop={true}>
-        <div >
-          <Image src={arbre} alt='yoga' />
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div>
-          <Image src={arc} alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={chameau}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={chat}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={enfant}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={etirement}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={huitre}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={montagne}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={poisson}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={triangle}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={warior1}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
-        <div className='w-30 h-30'>
-          <Image src={warior2}   alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div>
+          
+          {postures.map(({image,text,key})=>
+            <div className='flex flex-col content-center items-center justify-center' key={key}>
+              <div className='w-[200px] h-[200px] flex justify-center content-center items-center'>
+                <Image src={image} alt='yoga' className='object-contain relative w-full h-full' />
+              </div>
+              <div>
+                <p className='text-base'>{text}</p>
+              </div>
+          </div>
+          )}
         </Carousel>
-        {/* <div>
-          <Image src={img}  alt='yoga'/>
-          <p className='mt-3 text-base'>Favoriser la santé</p>
-        </div> */}
-        {/* </div> */}
-        
     </div>
   )
 }
