@@ -105,7 +105,7 @@ const Intro = () => {
       </div>
         <Carousel 
           showStatus={false} 
-          showArrows={true} 
+          showArrows={false} 
           showIndicators={false}
           showThumbs={false}
           autoPlay={true}
