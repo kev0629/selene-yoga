@@ -34,26 +34,29 @@ const columns = [
 const healthData: TableType[] = [
   {
     title:"Pratique",
-    val1:<div className='ml-8'>
+    val1:<div className='flex justify-around'>
+      <div className='w-32'>
       Massage bien-être
       <ul className='list-disc list-inside'>
         <li>Tao</li>
         <li>soin Reïki</li>
       </ul>
+      </div>
+      <div className='w-20'>{''}</div>
       </div>,
   },
   {
     title:"Durée",
     val1:<div className='flex justify-around'>
-      <div>1h</div>
-      <div>1h30</div>
+      <div className='w-20 text-center'>1h</div>
+      <div className='w-20 text-center'>1h30</div>
     </div>,
   },
   {
     title:"Tarifs",
     val1:<div className='flex justify-around'>
-    <div>60€</div>
-    <div>80€</div>
+    <div className='w-20 text-center'>60€</div>
+    <div className='w-20 text-center'>80€</div>
   </div>,
   },
   
@@ -62,24 +65,29 @@ const healthData: TableType[] = [
 const ConsultationData: TableType[] = [
   {
     title:"Pratique",
-    val1:<ul className='ml-8'>
-        <li>Thème Astral</li>
-        <li>Design Humain</li>
-        <li>Yi King de naissance</li>
-      </ul>,
+    val1:<div className='flex justify-around'>
+        <div className='w-40'>
+          <ul>
+            <li>Thème Astral</li>
+            <li>Design Humain</li>
+            <li>Yi King de naissance</li>
+          </ul>
+        </div>
+        <div className='w-20'>{''}</div>
+        </div>,
   },
   {
     title:"Durée",
-    val1:<div className='flex justify-between'>
-      <div className='ml-8'>2h</div>
-      <div>2h (avec soins)</div>
+    val1:<div className='flex justify-around'>
+      <div className='w-28 text-center'>2h</div>
+      <div className='w-28 text-center'>2h (avec soins)</div>
     </div>,
   },
   {
     title:"Tarifs",
-    val1:<div className='flex justify-between'>
-    <div className='ml-8'>120€</div>
-    <div className='mr-6'>150€</div>
+    val1:<div className='flex justify-around'>
+    <div className='w-28 text-center'>120€</div>
+    <div className='w-28 text-center'>150€</div>
   </div>,
   },
   
@@ -96,25 +104,25 @@ const yogaData: TableType[] = [
   {
     title:"Durée",
     val1:<div className='flex justify-around'>
-    <div>1h30</div>
-    <div>1h30</div>
-    <div>2h</div>
+    <div className='w-20 text-center'>1h30</div>
+    <div className='w-20 text-center'>1h30</div>
+    <div className='w-20 text-center'>2h</div>
   </div>
   },
   {
     title:"Tarifs à l’unité",
     val1:<div className='flex justify-around'>
-    <div>15€</div>
-    <div>50€</div>
-    <div>30€</div>
+    <div className='w-20 text-center'>15€</div>
+    <div className='w-20 text-center'>50€</div>
+    <div className='w-20 text-center'>30€</div>
     </div>
   },
   {
     title:"Tarifs forfait",
     val1:<div className='flex justify-around'>
-    <div>150€</div>
-    <div>500€</div>
-    <div>300€</div>
+    <div className='w-20 text-center'>150€</div>
+    <div className='w-20 text-center'>500€</div>
+    <div className='w-20 text-center'>300€</div>
     </div>
   },
   
@@ -124,22 +132,22 @@ const courseData: TableType[] = [
   {
     title:"Pratique",
     val1:<div className='flex justify-around'>
-        <div>Conférence</div>
-        <div><div>Ateliers</div> <div>Séminaires</div> <div>Stages</div></div>
+        <div className='w-32 text-center'>Conférence</div>
+        <div className='w-32 text-center'><div>Ateliers</div> <div>Séminaires</div> <div>Stages</div></div>
     </div>,
   },
   {
     title:"Durée",
     val1:<div className='flex justify-around'>
-    <div>1h30</div>
-    <div>Variable</div>
+    <div className='w-32 text-center'>1h30</div>
+    <div className='w-32 text-center'>Variable</div>
     </div>
   },
   {
     title:"Tarifs à l’unité",
     val1:<div className='flex justify-around'>
-    <div>10€</div>
-    <div>Variable</div>
+    <div className='w-32 text-center'>10€</div>
+    <div className='w-32 text-center'>Variable</div>
     </div>
   }
   
@@ -164,8 +172,7 @@ const PricesTable = (props:PropsTable) => {
             <tr> 
                 <th
                   colSpan={2} 
-                  className='font-serif font-light text-4xl border-b border-black'
-                  >
+                  className='font-serif font-light text-4xl border-b border-black'>
                   {props.title}
                 </th>
             </tr>
