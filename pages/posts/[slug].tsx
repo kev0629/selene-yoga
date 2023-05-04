@@ -38,13 +38,13 @@ const Post = ({post}: Props) => {
           />
           <div className='absolute inset-0 flex flex-col justify-center items-center center-content z-10'>
             <div>
-              <div className=' text-center text-white bold text-4xl font-serif'>{post.title}</div>
+              <div className=' text-center text-white bold text-4xl font-serif'>{post?.title}</div>
             </div>
           </div>
         </div>
         <p className='p-10 text-center'>
             
-        <PostBody content={post.content} />
+        <PostBody content={post?.content} />
         </p>
 
         <Footer bgClassName='bg-gradient-to-t from-selene-green to-selene-green-dark'/>
