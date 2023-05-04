@@ -31,7 +31,7 @@ const Post = ({post}: Props) => {
       <main className='text-xs md:text-base font-main'>
         <Navbar/>
         <div  className="relative h-32">
-          <Image src={post.coverImage.url} alt={'Mountain sunset'}
+          <Image src={post?.coverImage?.url} alt={'Mountain sunset'}
           fill
           className='object-cover'
           // placeholder='blur'
