@@ -166,8 +166,10 @@ const PricesTable = (props:PropsTable) => {
         getCoreRowModel: getCoreRowModel(),
       })
   return (
-    <div className='bg-white flex justify-center rounded-md'>
-      <table className='text-base bg-white w-full m-2'>
+    <div className="flex items-center content-center justify-center">
+    <div className='bg-white flex items-center content-center justify-center rounded-md w-full md:w-96 lg:w-[32rem]
+    '>
+      <table className='bg-white text-base w-full md:w-96  md:m-2 lg:w-[38rem]'>
         <thead>
             <tr> 
                 <th
@@ -190,13 +192,14 @@ const PricesTable = (props:PropsTable) => {
         </tbody>
       </table>
     </div>
+    </div>
   )
 }
 
 type Props ={}
 const Price = (props: Props) => {
   return (
-    <div className='flex flex-col content-center justify-center space-y-4'>
+    <div className='flex flex-col content-center items-center justify-center space-y-4 md:flex-none md:grid md:grid-cols-2'>
       <PricesTable data={healthData} title="Soins"/>
       <PricesTable data={ConsultationData} title="Consultations"/>
       <PricesTable data={yogaData} title="Cours de yoga"/>
