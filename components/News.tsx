@@ -9,7 +9,7 @@ import { useDimension } from '../hooks/useDimension'
 
 
 type Props = {
-  posts:any
+  posts:Article[]
 }
 
 type CardProps ={
@@ -17,6 +17,16 @@ type CardProps ={
   title:string,
   subTitle:string
 }
+
+type Article = {
+  slug: string;
+  coverImage: {
+    url: string;
+  };
+  title: string;
+  excerpt: string;
+}
+
 
 const Card = ({img, title, subTitle}:CardProps) => {
 
