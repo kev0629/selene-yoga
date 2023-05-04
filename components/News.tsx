@@ -8,7 +8,9 @@ import { useDimension } from '../hooks/useDimension'
 
 
 
-type Props = {}
+type Props = {
+  posts:any
+}
 
 type CardProps ={
   img:any,
@@ -21,7 +23,7 @@ const Card = ({img, title, subTitle}:CardProps) => {
   return(
     <div className="max-w-sm bg-white drop-shadow-lg w-56 m-2">
       <div className="flex justify-center relative">
-        <Image className="w-56 h-32 object-cover object-center" src={img} alt="" height={120} placeholder={'blur'} />
+        <Image className="w-56 h-32 object-cover object-center" src={img} alt="" width={224} height={128}/>
       </div>
       <div className=" flex flex-col px-5 pt-5">
           <h5 className="mb-2 text-2xl text-center text-black">{title}</h5>
@@ -36,7 +38,7 @@ const Card = ({img, title, subTitle}:CardProps) => {
 }
 
 
-const News = (props: Props) => {
+const News = ({posts}: Props) => {
   const [percent, setPercent] = useState(100)
   const [center, setCenter] = useState(false)
   const [fullScreen, setFullScreen] = useState(false)
@@ -69,9 +71,17 @@ const News = (props: Props) => {
  }, [windowsWidth])
   return (
     <section>
-      {/* <div className='flex flex-col justify-center'> */}
-        <Carousel showStatus={false} showThumbs={false} showIndicators={fullScreen ?false:true} emulateTouch={true} showArrows={false} centerMode={center} centerSlidePercentage={percent} >
-        <Card 
+        <Carousel showStatus={false} showThumbs={false} showIndicators={fullScreen ?false:true} emulateTouch={fullScreen ?false:true} showArrows={false} centerMode={center} centerSlidePercentage={percent} >
+            {/* {console.log(posts)} */}
+            {posts.slice(0, 4).map((post) => (
+          <Card
+            key={post.slug}
+            img={post.coverImage.url}
+            title={post.title}
+            subTitle={post.excerpt}
+          />
+        ))}
+        {/* <Card 
           img={img}
           title='Titre'
           subTitle='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'
@@ -90,7 +100,7 @@ const News = (props: Props) => {
           img={img}
           title='Titre'
           subTitle='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'
-          />
+          /> */}
         </Carousel>
       {/* </div> */}
       <div className="flex justify-center">
