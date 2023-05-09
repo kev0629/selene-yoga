@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from 'react'
-import Image from 'next/image'
 import img from '../Images/daniel-roe-lpjb_UMOyx8-unsplash.jpg'
 import StarButton from './StarButton'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { useDimension } from '../hooks/useDimension'
+import { Card } from './Card'
 import Link from 'next/link'
 
 
@@ -13,7 +13,7 @@ type Props = {
   posts:Article[]
 }
 
-type CardProps ={
+export type CardProps ={
   img:any,
   title:string,
   subTitle:string
@@ -29,28 +29,6 @@ type Article = {
   };
   title: string;
   excerpt: string;
-}
-
-
-const Card = ({img, title, subTitle,id, link}:CardProps) => {
-
-  return(
-    <div className="max-w-sm bg-white drop-shadow-lg w-56 m-2">
-      <div className="flex justify-center relative">
-        <Image className="w-56 h-32 object-cover object-center" src={img} alt="" width={224} height={128}/>
-      </div>
-      <div className=" flex flex-col px-5 pt-5">
-          <h5 className="mb-2 text-2xl text-center text-black">{title}</h5>
-          <p className="mb-3 font-normal text-gray-700">{subTitle}</p>
-          <div className=' flex justify-center'>
-            <Link key={id} href={`/posts/${link}`} passHref>
-              <StarButton title='Lire la suite' className='px-3 py-2 m-2'/>
-            </Link>
-          </div>
-          
-      </div>
-    </div>
-  )
 }
 
 
@@ -122,7 +100,9 @@ const News = ({posts}: Props) => {
         </Carousel>
       {/* </div> */}
       <div className="flex justify-center">
-      <StarButton title="Voir plus d'articles" className='px-6 py-3 mt-4'/>
+      <Link href="/posts">
+        <StarButton title="Voir plus d'articles" className='px-6 py-3 mt-4'/>
+      </Link>
       </div>
     </section>
 
