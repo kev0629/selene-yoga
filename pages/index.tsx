@@ -22,14 +22,14 @@ import Story from '../components/Story'
 import Yogastro from '../components/yogastro'
 import Price from '../components/Price'
 
-import { getAllPostsForHome, getAllinfos } from '../lib/api'
+import { getAllPostsForHome, getAllEvents } from '../lib/api'
 
 type homeProps = {
   allPosts:any, 
-  allInfos:any
+  allEvents:any
 }
 
-export default function Home({allPosts, allInfos}:homeProps) {
+export default function Home({allPosts, allEvents}:homeProps) {
   const [story, setStory] = useState<boolean>(false)
   return (
     < >
@@ -56,15 +56,16 @@ export default function Home({allPosts, allInfos}:homeProps) {
             <Yogastro/>
           </div>
         </Section>
-        <Section 
+
+        {allEvents && <Section 
           title='Actualités - évènements' 
-          name='actu' 
+          name='actu'
           borderColor='border-selene-green' 
           textColor='text-selene-green'>
           <div className='p-5'>
-            <Actu/>
+            <Actu events={allEvents}/>
           </div>
-        </Section>
+        </Section>}
         {allPosts && <Section title='Articles' 
           borderColor='border-selene-green' 
           textColor='text-selene-green'
@@ -123,12 +124,11 @@ export default function Home({allPosts, allInfos}:homeProps) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? []
-  const allInfos = (await getAllinfos()) ?? []
+  const allEvents = (await getAllEvents()) ?? []
   return {
     props: { preview, 
             allPosts,
-             allInfos, 
-            //  datas :response.results.slice(0).reverse()
+             allEvents,
              },
   }
 }
