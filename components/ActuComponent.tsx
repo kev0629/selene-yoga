@@ -13,7 +13,7 @@ const ActuComponent = (props: Props) => {
       <div className="relative  w-32 h-24 rounded-xl overflow-hidden md:w-44 md:h-36">
         <div className='flex flex-col justify-center center-content mt-6'>
         </div>
-          <Image src={props.img} alt="Mountains sunset" fill placeholder='blur' />
+          <Image src={props.img} alt="Mountains sunset" fill />
       </div>
       <div className="flex flex-col justify-center">
         <div className=''>
