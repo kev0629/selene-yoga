@@ -6,12 +6,13 @@ type ActuProps ={
   events : any
 }
 
+
 const Actu = ({events}:ActuProps) => {
   return(
     <div className='flex flex-col justify-center content-center '>
       {console.log(events[0].date)}
       {console.log(events[0].endDate)}
-      {events.slice(0, 4).map((event) => {
+      {events.slice(0, 4).map((event:any) => {
         const date = new Date(event.date);
         const endDate = new Date(event.endDate);
         const  month = date.toLocaleString('default', { month: 'long' })
