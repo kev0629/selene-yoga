@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
 type Props = {
-  bgClassName:string
-}
+  bgClassName: string;
+};
 
 const Footer = (props: Props) => {
   return (
     <>
       <footer className={`${props.bgClassName} text-white text-[10px]`}>
-        <div className='flex flex-row p-5 gap-5'>
-          <div className='basis-1/2 text-center'>
-            <div className='font-serif'>MENTIONS LEGALES</div>
+        <div className="flex flex-row p-5 gap-5">
+          <div className="basis-1/2 text-center">
+            <div className="font-serif">MENTIONS LEGALES</div>
             <br />
             <div>Proprietaitre de site:</div>
             <div>florian.ponte@gmail.com</div>
@@ -19,8 +19,8 @@ const Footer = (props: Props) => {
             <div>Site réalisé par KS Project</div>
             <div>Hébergement chez O2 Switch</div>
           </div>
-          <div className='basis-1/2 text-center'>
-            <div className='font-serif'>CONTACT</div>
+          <div className="basis-1/2 text-center">
+            <div className="font-serif">CONTACT</div>
             <br />
             <div>Florian Ponte</div>
             <div>5 chemin du turlututu</div>
@@ -29,8 +29,7 @@ const Footer = (props: Props) => {
         </div>
       </footer>
     </>
-    
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

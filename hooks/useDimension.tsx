@@ -1,24 +1,20 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
+export function useDimension() {
+  const [dimension, setDimension] = useState<number>(0);
 
-export function useDimension(){
+  useEffect(() => {
+    window.addEventListener("resize", resizeFunc);
 
-    const [dimension, setDimension] = useState<number>(0);
+    function resizeFunc() {
+      setDimension(window.innerWidth);
+    }
+    resizeFunc();
 
-    useEffect(() => {
+    return () => {
+      window.addEventListener("resize", resizeFunc);
+    };
+  }, []);
 
-        window.addEventListener('resize', resizeFunc);
-
-        function resizeFunc(){
-            setDimension(window.innerWidth)
-        }
-        resizeFunc();
-
-        return () => {
-            window.addEventListener('resize', resizeFunc);
-        }
-
-    }, []);
-
-    return dimension
-}  
+  return dimension;
+}

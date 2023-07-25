@@ -1,6 +1,11 @@
-import {useRef, useEffect, useState} from 'react'
+import { useRef, useEffect, useState } from "react";
 
-export const useCarousel = (): [React.MutableRefObject<any>, number, number, React.Dispatch<React.SetStateAction<number>>] => {
+export const useCarousel = (): [
+  React.MutableRefObject<any>,
+  number,
+  number,
+  React.Dispatch<React.SetStateAction<number>>
+] => {
   const [width, setwidth] = useState<number>(0);
   const carousel = useRef<any>();
   const [scroll, setScroll] = useState<number>(0);
@@ -9,4 +14,3 @@ export const useCarousel = (): [React.MutableRefObject<any>, number, number, Rea
   }, []);
   return [carousel, width, scroll, setScroll];
 };
-  
