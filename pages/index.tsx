@@ -139,5 +139,6 @@ export async function getStaticProps({ preview = false }) {
   console.log(allPosts[0]);
   return {
     props: { preview, allPosts, allEvents },
+    revalidate: 1,
   };
 }
