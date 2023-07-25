@@ -79,5 +79,6 @@ export async function getStaticPaths() {
   return {
     paths: allPosts?.map(({ slug }: slugProps) => `/posts/${slug}`) ?? [],
     fallback: true,
+    revalidate: 1,
   };
 }
