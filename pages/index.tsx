@@ -101,16 +101,6 @@ export default function Home({ allPosts, allEvents }: homeProps) {
           </div>
         </Section>
         <Section
-          title="Tarifs"
-          name="prices"
-          textColor="text-white"
-          bg="bg-practice-green-light"
-        >
-          <div className="p-5">
-            <Price />
-          </div>
-        </Section>
-        <Section
           title="Contact"
           textColor="text-white"
           name="contact"
