@@ -10,8 +10,6 @@ type CustomMarkdownOptions = (content: any) => {
 };
 
 const customMarkdownOptions: CustomMarkdownOptions = (content: any) => {
-  console.log("Contenu:", content.links);
-
   return {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) => (

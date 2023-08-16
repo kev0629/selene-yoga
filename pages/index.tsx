@@ -126,7 +126,6 @@ export default function Home({ allPosts, allEvents }: homeProps) {
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
   const allEvents = (await getAllEvents()) ?? [];
-  console.log(allPosts[0]);
   return {
     props: { preview, allPosts, allEvents },
     revalidate: 1,
