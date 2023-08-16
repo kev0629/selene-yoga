@@ -20,10 +20,13 @@ const Actu = ({ events }: ActuProps) => {
             text1={event.title}
             key={event.title}
             text2={`${event.city} - ${date.getDate()} ${
-              month != endMonth ? month : ""
-            } ${
-              year != endYear ? year : ""
-            } au ${endDate.getDate()} ${endMonth} ${endYear}`}
+              month != endMonth || !event.endDate ? month : ""
+            } ${year != endYear || !event.endDate ? year : ""}
+            ${
+              event.endDate
+                ? `au ${endDate.getDate()} ${endMonth} ${endYear}`
+                : ""
+            }`}
             img={event.image.url}
           />
         );
