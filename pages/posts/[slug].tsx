@@ -44,8 +44,21 @@ const Post = ({ post }: Props) => {
         </div>
         <p className="p-10 text-center">
           <PostBody content={post?.content} />
+          <div className="flex flex-row-reverse m-2">
+            <div className="flex flex-col content-center align-content justify-center">
+              <div className=" text-gray-700 font-bold ">
+                {post.author.name}
+              </div>
+            </div>
+            <Image
+              className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+              src={post.author.picture.url}
+              alt="avatar"
+              width={100}
+              height={100}
+            />
+          </div>
         </p>
-
         <Footer bgClassName="bg-gradient-to-t from-selene-green to-selene-green-dark" />
       </main>
     </>
